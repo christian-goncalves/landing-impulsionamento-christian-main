@@ -1,0 +1,5990 @@
+{
+  "metadata": {
+    "fonte": "ABNA - Associação Brasileira de Narcóticos Anônimos",
+    "url_fonte": "https://www.na.org.br/reunioes-virtuais",
+    "timezone_padrao": "America/Sao_Paulo",
+    "ultima_atualizacao": "2026-02-15",
+    "versao": "2.0.0",
+    "nota_dias": "dias_semana: 0=Dom, 1=Seg, 2=Ter, 3=Qua, 4=Qui, 5=Sex, 6=Sáb",
+    "nota_consolidacao": "Grupos com mesmo ID/horário em múltiplos dias foram consolidados em uma única sessão com array de dias_semana.",
+    "total_grupos": 125
+  },
+  "grupos": [
+    {
+      "id": "grupo_virtual_madrugada",
+      "nome": "Grupo Virtual Madrugada",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "00:05",
+          "horario_fim": "02:05",
+          "app": "Zoom",
+          "zoom_id": "960 062 7555",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_noite_adentro",
+      "nome": "Grupo Noite Adentro",
+      "cidade": "Porto Alegre",
+      "estado": "Rio Grande do Sul",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "00:10",
+          "horario_fim": "02:10",
+          "app": "Zoom",
+          "zoom_id": "832 1527 3095",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "00:10",
+          "horario_fim": "02:10",
+          "app": "Zoom",
+          "zoom_id": "832 1527 3095",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do guia de passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "00:10",
+          "horario_fim": "02:10",
+          "app": "Zoom",
+          "zoom_id": "832 1527 3095",
+          "senha": "000000",
+          "formatos": [
+            "Ordem de Levantamento de Mãos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_insonia_na_recuperacao",
+      "nome": "Grupo Insônia na Recuperação",
+      "cidade": "Porto Alegre",
+      "estado": "Rio Grande do Sul",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "02:00",
+          "horario_fim": "04:00",
+          "app": "Zoom",
+          "zoom_id": "777 000 1988",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões abertas: última sexta-feira do mês"
+        }
+      ]
+    },
+    {
+      "id": "grupo_conexao_matinal",
+      "nome": "Grupo Conexão Matinal de NA",
+      "cidade": null,
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "04:30",
+          "horario_fim": "06:30",
+          "app": "Zoom",
+          "zoom_id": "777 000 1988",
+          "senha": "000000",
+          "formatos": [
+            "Recém-chegados",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_dunas_online",
+      "nome": "Grupo Dunas On-line",
+      "cidade": "Natal",
+      "estado": "Rio Grande do Norte",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            4,
+            6
+          ],
+          "horario_inicio": "04:30",
+          "horario_fim": "06:30",
+          "app": "Zoom",
+          "zoom_id": "839 547 5072",
+          "senha": "0000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1,
+            2,
+            3
+          ],
+          "horario_inicio": "04:30",
+          "horario_fim": "06:30",
+          "app": "Zoom",
+          "zoom_id": "839 547 5072",
+          "senha": "0000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "04:30",
+          "horario_fim": "06:30",
+          "app": "Zoom",
+          "zoom_id": "839 547 5072",
+          "senha": "0000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1,
+            2,
+            5
+          ],
+          "horario_inicio": "22:30",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "839 547 5072",
+          "senha": "0000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_cafe_com_na",
+      "nome": "Grupo Café com NA",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "05:00",
+          "horario_fim": "07:00",
+          "app": "Zoom",
+          "zoom_id": "801 678 7862",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_novo_dia",
+      "nome": "Grupo Novo Dia",
+      "cidade": "Ilha da Babitonga",
+      "estado": "Santa Catarina",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "05:00",
+          "horario_fim": "07:00",
+          "app": "Zoom",
+          "zoom_id": "558 128 221",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_virtual_desperta_rio_grande",
+      "nome": "Grupo Virtual Desperta Rio Grande de NA",
+      "cidade": "Ilópolis",
+      "estado": "Rio Grande do Sul",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            6
+          ],
+          "horario_inicio": "06:30",
+          "horario_fim": "08:00",
+          "app": "Zoom",
+          "zoom_id": "999 777 1988",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Literatura",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Dom: Reuniões Abertas 1ª segunda-feira do mês. Sáb: Estudo de Passos"
+        },
+        {
+          "dias_semana": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "05:00",
+          "horario_fim": "07:00",
+          "app": "Zoom",
+          "zoom_id": "999 777 1988",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_conquista_sem_fronteiras",
+      "nome": "Grupo Conquista Sem Fronteiras",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "08:30",
+          "app": "Zoom",
+          "zoom_id": "349 541 1790",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "08:30",
+          "app": "Zoom",
+          "zoom_id": "349 541 1790",
+          "senha": null,
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_viver_limpo_online",
+      "nome": "Grupo Viver Limpo On-line",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "08:30",
+          "app": "Zoom",
+          "zoom_id": "457 368 9331",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Fuso horário: GMT -4"
+        },
+        {
+          "dias_semana": [
+            3,
+            5
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "08:30",
+          "app": "Zoom",
+          "zoom_id": "457 368 9331",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "08:30",
+          "app": "Zoom",
+          "zoom_id": "457 368 9331",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "08:30",
+          "app": "Zoom",
+          "zoom_id": "457 368 9331",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "15:00",
+          "horario_fim": "16:30",
+          "app": "Zoom",
+          "zoom_id": "457 368 9331",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "457 368 9331",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Fuso horário: GMT -3. Grupo Sul da Ilha - Florianópolis/SC"
+        }
+      ]
+    },
+    {
+      "id": "grupo_armacao_dos_buzios",
+      "nome": "Grupo Armação dos Búzios",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "08:50",
+          "app": "Zoom",
+          "zoom_id": "690 796 9648",
+          "senha": "000000",
+          "formatos": [
+            "Estudo da Meditação Diária",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "09:00",
+          "horario_fim": "11:00",
+          "app": "Zoom",
+          "zoom_id": "690 796 9648",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_buzios_online",
+      "nome": "Grupo Búzios On-line",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zoom",
+          "zoom_id": "822 227 9218",
+          "senha": "000000",
+          "formatos": [
+            "Estudo da Meditação Diária",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "17:00",
+          "horario_fim": "19:00",
+          "app": "Zoom",
+          "zoom_id": "822 227 9218",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "LIBRAS: 3º e 4º domingo do mês"
+        }
+      ]
+    },
+    {
+      "id": "grupo_novo_amanhecer_virtual",
+      "nome": "Grupo Novo Amanhecer Virtual",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zoom",
+          "zoom_id": "415 094 2864",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões Temáticas: 3º domingo do mês"
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zoom",
+          "zoom_id": "415 094 2864",
+          "senha": null,
+          "formatos": [
+            "Novos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zoom",
+          "zoom_id": "415 094 2864",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zoom",
+          "zoom_id": "415 094 2864",
+          "senha": null,
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zoom",
+          "zoom_id": "415 094 2864",
+          "senha": null,
+          "formatos": [
+            "Estudo de Conceitos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zoom",
+          "zoom_id": "415 094 2864",
+          "senha": null,
+          "formatos": [
+            "Estudo do guia de passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zoom",
+          "zoom_id": "415 094 2864",
+          "senha": null,
+          "formatos": [
+            "Estudo dos Princípios Orientadores",
+            "Estudo de Tradições",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_despertar",
+      "nome": "Grupo Despertar",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões Temáticas: Último domingo do mês"
+        },
+        {
+          "dias_semana": [
+            2,
+            4
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "08:30",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Estudo de Literatura",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "08:30",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_salvar_vidas",
+      "nome": "Grupo Salvar Vidas",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zoom",
+          "zoom_id": "202 407 1234",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "12:30",
+          "horario_fim": "14:30",
+          "app": "Zoom",
+          "zoom_id": "202 407 1234",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "202 407 1234",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_unidade_servico",
+      "nome": "Grupo Unidade & Serviço",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "07:30",
+          "horario_fim": "09:30",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1,
+            4
+          ],
+          "horario_inicio": "14:30",
+          "horario_fim": "16:00",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "14:30",
+          "horario_fim": "16:00",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Histórias Pessoais / Inventário Diário do 10º Passo"
+        },
+        {
+          "dias_semana": [
+            0,
+            4
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "23:30",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_boa_noite_nordeste",
+      "nome": "Grupo Boa Noite Nordeste",
+      "cidade": "Recife",
+      "estado": "Pernambuco",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "07:30",
+          "horario_fim": "09:30",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "23:30",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Temática: Histórias Pessoais"
+        },
+        {
+          "dias_semana": [
+            1,
+            4
+          ],
+          "horario_inicio": "14:30",
+          "horario_fim": "16:00",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_esperanca",
+      "nome": "Grupo Esperança",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "08:00",
+          "horario_fim": "10:00",
+          "app": "Zoom",
+          "zoom_id": "448 734 4400",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "12:00",
+          "horario_fim": "14:00",
+          "app": "Zoom",
+          "zoom_id": "448 734 4400",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "448 734 4400",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "448 734 4400",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_novo_amanhecer_espiritualidade",
+      "nome": "Grupo Novo Amanhecer Espiritualidade",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "08:00",
+          "horario_fim": "10:00",
+          "app": "Zoom",
+          "zoom_id": "558 128 221",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1,
+            2,
+            5
+          ],
+          "horario_inicio": "15:00",
+          "horario_fim": "17:00",
+          "app": "Zoom",
+          "zoom_id": "558 128 221",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_bom_dia_brasil",
+      "nome": "Grupo Bom Dia Brasil",
+      "cidade": "Porto Alegre",
+      "estado": "Rio Grande do Sul",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "09:00",
+          "horario_fim": "11:00",
+          "app": "Zoom",
+          "zoom_id": "443 025 1323",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões Temáticas: 3º sábado do mês"
+        }
+      ]
+    },
+    {
+      "id": "grupo_por_que_estamos_aqui",
+      "nome": "Grupo Por que estamos aqui?",
+      "cidade": "Salvador",
+      "estado": "Bahia",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "09:30",
+          "horario_fim": "11:30",
+          "app": "Zoom",
+          "zoom_id": "916 4058 8499",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "O grupo possui carimbo para beneficiários da justiça"
+        }
+      ]
+    },
+    {
+      "id": "grupo_usl",
+      "nome": "Grupo USL",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "07:00",
+          "horario_fim": "09:00",
+          "app": "Zoom",
+          "zoom_id": "220 320 2053",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Seg: Estudo dos Princípios Orientadores"
+        },
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "220 320 2053",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "15:00",
+          "horario_fim": "17:00",
+          "app": "Zoom",
+          "zoom_id": "220 320 2053",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "220 320 2053",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "21:30",
+          "horario_fim": "23:30",
+          "app": "Zoom",
+          "zoom_id": "220 320 2053",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Literatura",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "21:30",
+          "horario_fim": "23:30",
+          "app": "Zoom",
+          "zoom_id": "220 320 2053",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3,
+            4,
+            6
+          ],
+          "horario_inicio": "21:30",
+          "horario_fim": "23:30",
+          "app": "Zoom",
+          "zoom_id": "220 320 2053",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "21:30",
+          "horario_fim": "23:30",
+          "app": "Zoom",
+          "zoom_id": "220 320 2053",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_digital_praias",
+      "nome": "Grupo Digital Praias",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "210 003 1799",
+          "senha": null,
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            2,
+            5,
+            6
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "210 003 1799",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "210 003 1799",
+          "senha": null,
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "210 003 1799",
+          "senha": null,
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "210 003 1799",
+          "senha": null,
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "16:00",
+          "horario_fim": "18:00",
+          "app": "Zoom",
+          "zoom_id": "210 003 1799",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_largo_do_machado_online",
+      "nome": "Grupo Largo do Machado On-line",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "389 662 9586",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "17:30",
+          "horario_fim": "19:30",
+          "app": "Zoom",
+          "zoom_id": "389 662 9586",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_nova_uniao_praias",
+      "nome": "Grupo Nova União Praias",
+      "cidade": "Serra",
+      "estado": "Espírito Santo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "557 510 0432",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_virtual_para_na",
+      "nome": "Grupo Virtual Para-NA",
+      "cidade": "Curitiba",
+      "estado": "Paraná",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "892 8937 2940",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_gata",
+      "nome": "Grupo Gata",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            3,
+            4
+          ],
+          "horario_inicio": "12:00",
+          "horario_fim": "14:00",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Qui: Estudo do livro Viver Limpo"
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "12:00",
+          "horario_fim": "14:00",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Passos",
+            "Interesse feminino",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "12:00",
+          "horario_fim": "14:00",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do Texto Básico",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "12:00",
+          "horario_fim": "13:30",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "17:00",
+          "horario_fim": "19:00",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Interesse feminino",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2,
+            5
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "20:30",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "21:30",
+          "horario_fim": "23:30",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_virtual_meio_dia",
+      "nome": "Grupo Virtual Meio-dia",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "12:00",
+          "horario_fim": "14:00",
+          "app": "Zoom",
+          "zoom_id": "801 678 7862",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Pode se estender por mais 1h conforme disponibilidade dos servidores"
+        }
+      ]
+    },
+    {
+      "id": "grupo_unidos_venceremos",
+      "nome": "Grupo Unidos Venceremos",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "14:00",
+          "horario_fim": "16:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões Abertas: Último domingo do mês e feriados"
+        }
+      ]
+    },
+    {
+      "id": "grupo_fenix_de_na",
+      "nome": "Grupo Fênix de NA",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "14:00",
+          "horario_fim": "16:00",
+          "app": "Zoom",
+          "zoom_id": "892 8948 7374",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "08:00",
+          "horario_fim": "09:30",
+          "app": "Zoom",
+          "zoom_id": "892 8948 7374",
+          "senha": "000000",
+          "formatos": [
+            "Interesse feminino",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "14:00",
+          "horario_fim": "16:00",
+          "app": "Zoom",
+          "zoom_id": "892 8948 7374",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_virtual_bom_retiro",
+      "nome": "Grupo Virtual Bom Retiro",
+      "cidade": "São Francisco do Sul",
+      "estado": "Santa Catarina",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "14:00",
+          "horario_fim": "16:00",
+          "app": "Zoom",
+          "zoom_id": "777 000 1988",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "14:00",
+          "horario_fim": "16:00",
+          "app": "Zoom",
+          "zoom_id": "777 000 1988",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_juntos_podemos_sph",
+      "nome": "Grupo Juntos Podemos SPH",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "15:00",
+          "horario_fim": "17:00",
+          "app": "Zoom",
+          "zoom_id": "458 522 0438",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_juntos_podemos_sph_pe",
+      "nome": "Grupo Juntos Podemos SPH",
+      "cidade": "Olinda",
+      "estado": "Pernambuco",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "15:00",
+          "horario_fim": "17:00",
+          "app": "Zoom",
+          "zoom_id": "622 659 5595",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_junto_podemos_pe",
+      "nome": "Grupo Junto Podemos",
+      "cidade": "Olinda",
+      "estado": "Pernambuco",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "15:00",
+          "horario_fim": "17:00",
+          "app": "Zoom",
+          "zoom_id": "458 522 0438",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_acre_dito",
+      "nome": "Grupo Acre-dito",
+      "cidade": "Rio Branco",
+      "estado": "Acre",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "16:00",
+          "horario_fim": "18:00",
+          "app": "Zoom",
+          "zoom_id": "867 941 3204",
+          "senha": "123456",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Rio_Branco",
+          "notas": "Reuniões Temáticas: 2º domingo do mês. Pode se estender por mais 1h"
+        },
+        {
+          "dias_semana": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "867 941 3204",
+          "senha": "123456",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Rio_Branco",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "867 941 3204",
+          "senha": "123456",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Rio_Branco",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_16h_sem_fronteiras",
+      "nome": "Grupo 16:00 Sem Fronteiras",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "16:00",
+          "horario_fim": "18:00",
+          "app": "Zoom",
+          "zoom_id": "993 345 5789",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões direcionadas a adictos lusófonos (Brasil, Portugal, Moçambique, etc.)"
+        }
+      ]
+    },
+    {
+      "id": "grupo_santa_cecilia",
+      "nome": "Grupo Santa Cecília",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "17:00",
+          "horario_fim": "19:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_virtual_arco_iris_brasil",
+      "nome": "Grupo Virtual Arco-íris Brasil de NA",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "17:00",
+          "horario_fim": "19:00",
+          "app": "Zoom",
+          "zoom_id": "440 056 0278",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual",
+            "LGBTQIAPN+"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "O grupo possui carimbo para beneficiários da justiça"
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "17:00",
+          "horario_fim": "19:00",
+          "app": "Zoom",
+          "zoom_id": "440 056 0278",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual",
+            "LGBTQIAPN+"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "O grupo possui carimbo para beneficiários da justiça"
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "440 056 0278",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do guia de passos",
+            "Reunião Virtual",
+            "LGBTQIAPN+"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "440 056 0278",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual",
+            "LGBTQIAPN+"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "440 056 0278",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Literatura",
+            "Reunião Virtual",
+            "LGBTQIAPN+"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "440 056 0278",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do livro Guia de Princípios",
+            "Reunião Virtual",
+            "LGBTQIAPN+"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2,
+            5
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "440 056 0278",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual",
+            "LGBTQIAPN+"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_nova_era_online",
+      "nome": "Grupo Nova Era On-line",
+      "cidade": "Salvador",
+      "estado": "Bahia",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "886 1481 9314",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "886 1481 9314",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            6
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "886 1481 9314",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_resiliencia",
+      "nome": "Grupo Resiliência",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            3,
+            4,
+            6
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "879 658 9210",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "879 658 9210",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Hibrida (virtual e presencial)"
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "879 658 9210",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "23:00",
+          "horario_fim": "01:00",
+          "app": "Zoom",
+          "zoom_id": "879 658 9210",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_unidade_auxiliadora",
+      "nome": "Grupo Unidade Auxiliadora",
+      "cidade": "Porto Alegre",
+      "estado": "Rio Grande do Sul",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "horario_inicio": "18:30",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "224 992 8383",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões Abertas: 1ª sexta-feira do mês"
+        }
+      ]
+    },
+    {
+      "id": "grupo_liberdade_de_na",
+      "nome": "Grupo Liberdade de NA",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "20:30",
+          "app": "Zoom",
+          "zoom_id": "210 910 8110",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": "Reuniões Abertas: 1º domingo do mês. Fuso horário: GMT -2"
+        }
+      ]
+    },
+    {
+      "id": "grupo_virtual_horizonte",
+      "nome": "Grupo Virtual Horizonte",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "20:30",
+          "app": "Zoom",
+          "zoom_id": "917 260 9611",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual",
+            "Estudo do guia de passos"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1,
+            5,
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "20:30",
+          "app": "Zoom",
+          "zoom_id": "917 260 9611",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "20:30",
+          "app": "Zoom",
+          "zoom_id": "917 260 9611",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "20:30",
+          "app": "Zoom",
+          "zoom_id": "917 260 9611",
+          "senha": "000000",
+          "formatos": [
+            "Estudo dos Princípios Orientadores",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_navegantes",
+      "nome": "Grupo Navegantes",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Ter: Temática"
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_gloria",
+      "nome": "Grupo Glória",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "268 275 700",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": "Fuso horário: GMT -2"
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "268 275 700",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "21:30",
+          "horario_fim": "23:30",
+          "app": "Zoom",
+          "zoom_id": "268 275 700",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_renascer_online",
+      "nome": "Grupo Renascer On-line",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "220 120 1953",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_recomeco_sp",
+      "nome": "Grupo Recomeço",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "415 094 2864",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_ribeira_virtual",
+      "nome": "Grupo Ribeira Virtual",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "276 145 3307",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "276 145 3307",
+          "senha": null,
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_liberdade_sao_goncalo",
+      "nome": "Grupo Liberdade",
+      "cidade": "São Gonçalo",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "210 910 8110",
+          "senha": "000000",
+          "formatos": [
+            "Estudo dos Princípios Orientadores",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": "Reuniões Abertas: 1º domingo do mês"
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "210 910 8110",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "210 910 8110",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Tradições",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "210 910 8110",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Conceitos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "210 910 8110",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do Texto Básico",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "210 910 8110",
+          "senha": "000000",
+          "formatos": [
+            "Retorno do Só Por Hoje",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "210 910 8110",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_transcender_de_na",
+      "nome": "Grupo Transcender de NA",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "579 452 4106",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual",
+            "LGBTQIAPN+"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Abertas: 1º domingo; Temática: 1º sábado do mês"
+        }
+      ]
+    },
+    {
+      "id": "grupo_5_mais_2",
+      "nome": "Grupo 5+2",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Sáb: Estudo de Passos"
+        }
+      ]
+    },
+    {
+      "id": "grupo_recuperasurf",
+      "nome": "Grupo Recuperasurf",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "776 952 7148",
+          "senha": "999999",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_estrela",
+      "nome": "Grupo Estrela",
+      "cidade": "São Luís",
+      "estado": "Maranhão",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            5
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Funciona em Feriados. Acessibilidade total a cadeirantes"
+        }
+      ]
+    },
+    {
+      "id": "grupo_unidade_canela_verde",
+      "nome": "Grupo Virtual Canela Verde",
+      "cidade": "Vitória",
+      "estado": "Espírito Santo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "202 307 1153",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_unidade_sp",
+      "nome": "Grupo Unidade",
+      "cidade": null,
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "477 801 0224",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Sem senha"
+        }
+      ]
+    },
+    {
+      "id": "grupo_uniao_vitoria",
+      "nome": "Grupo União",
+      "cidade": "Vitória",
+      "estado": "Espírito Santo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "horario_inicio": "17:00",
+          "horario_fim": "19:00",
+          "app": "Zoom",
+          "zoom_id": "833 214 4243",
+          "senha": "190941",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_grajai_online",
+      "nome": "Grupo Grajaú On-line",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "913 379 8128",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_vencedores",
+      "nome": "Grupo Vencedores",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "762 803 9474",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Sáb: Aberta para visitantes"
+        },
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "762 803 9474",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "762 803 9474",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "762 803 9474",
+          "senha": "000000",
+          "formatos": [
+            "Recém-chegados",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "762 803 9474",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Literatura",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4,
+            6
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "762 803 9474",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "762 803 9474",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_vila_isabel",
+      "nome": "Grupo Vila Isabel",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "473 660 3661",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do Texto Básico",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "473 660 3661",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do guia de passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            0,
+            3,
+            4,
+            6
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "473 660 3661",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "473 660 3661",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_viemos_a_acreditar_online",
+      "nome": "Grupo Viemos a Acreditar On-line",
+      "cidade": "Gravatá",
+      "estado": "Pernambuco",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            4
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "386 861 8887",
+          "senha": "001953",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_caminho_dos_passos",
+      "nome": "Grupo Caminho dos Passos",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "09:00",
+          "horario_fim": "10:30",
+          "app": "Zoom",
+          "zoom_id": "911 190 7777",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "911 190 7777",
+          "senha": null,
+          "formatos": [
+            "Estudo de Tradições",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "911 190 7777",
+          "senha": null,
+          "formatos": [
+            "Estudo do Isto Resulta",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "911 190 7777",
+          "senha": null,
+          "formatos": [
+            "Estudo do guia de passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "911 190 7777",
+          "senha": null,
+          "formatos": [
+            "Estudo do livro Apadrinhamento",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "911 190 7777",
+          "senha": null,
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "911 190 7777",
+          "senha": null,
+          "formatos": [
+            "Estudo do Texto Básico",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões de Estudos: Texto Básico Sexta Edição"
+        }
+      ]
+    },
+    {
+      "id": "grupo_so_por_elas",
+      "nome": "Grupo Só Por Elas",
+      "cidade": "Belo Horizonte",
+      "estado": "Minas Gerais",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:50",
+          "app": "Zoom",
+          "zoom_id": "443 025 1323",
+          "senha": null,
+          "formatos": [
+            "Interesse feminino",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_so_por_hoje_brasil",
+      "nome": "Grupo Só Por Hoje Brasil",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "439 128 031",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões Adms: 1º domingo do mês, às 18h15"
+        }
+      ]
+    },
+    {
+      "id": "grupo_quarentena",
+      "nome": "Grupo Quarentena",
+      "cidade": "Salvador",
+      "estado": "Bahia",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            2,
+            4
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "603 887 055",
+          "senha": "992229",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Dom: Aberta. Qua e Qui: Estudo de Passos"
+        },
+        {
+          "dias_semana": [
+            1,
+            3
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "603 887 055",
+          "senha": "992229",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "603 887 055",
+          "senha": "992229",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "603 887 055",
+          "senha": "992229",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "603 887 055",
+          "senha": "992229",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_amazonia_online",
+      "nome": "Grupo Amazônia On-line",
+      "cidade": "Manaus",
+      "estado": "Amazonas",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "857 2096 5799",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Sex: Reuniões Temáticas: Última sexta-feira do mês. Ter: Estudo de Passos"
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "857 2096 5799",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_ponto_de_equilibrio_pe",
+      "nome": "Grupo Ponto de Equilíbrio",
+      "cidade": "Olinda",
+      "estado": "Pernambuco",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "777 000 1988",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_ponto_de_equilibrio_es",
+      "nome": "Grupo Ponto de Equilíbrio",
+      "cidade": "Vila Velha",
+      "estado": "Espírito Santo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "777 000 1988",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Literatura",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_recuperacao_na_bahia",
+      "nome": "Grupo Recuperação de NA Bahia",
+      "cidade": "Salvador",
+      "estado": "Bahia",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            2,
+            5,
+            6
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "916 4058 8499",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Ter: Estudo Viver Limpo"
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "916 4058 8499",
+          "senha": "000000",
+          "formatos": [
+            "Retorno do Só Por Hoje",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "916 4058 8499",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_juntos_podemos_online",
+      "nome": "Grupo Juntos Podemos On-line de NA",
+      "cidade": "Vitória",
+      "estado": "Espírito Santo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "999 123 1953",
+          "senha": "000000",
+          "formatos": [
+            "Leitura do SPH",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": "Fuso: GMT -2"
+        },
+        {
+          "dias_semana": [
+            0,
+            6
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "999 123 1953",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "999 123 1953",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "999 123 1953",
+          "senha": "000000",
+          "formatos": [
+            "Estudo dos Princípios Orientadores",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "999 123 1953",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "999 123 1953",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Tradições",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "999 123 1953",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Fortaleza",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_ateus_e_agnosticos",
+      "nome": "Grupo Ateus e Agnósticos",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            2
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "666 000 1953",
+          "senha": null,
+          "formatos": [
+            "Ateus e Agnósticos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões Adms: 1º sábado do mês"
+        }
+      ]
+    },
+    {
+      "id": "grupo_mundo_sem_fronteiras",
+      "nome": "Grupo Mundo Sem Fronteiras",
+      "cidade": "Cuiabá",
+      "estado": "Mato Grosso",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "659 229 7438",
+          "senha": "000123",
+          "formatos": [
+            "Ordem de Levantamento de Mãos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões Abertas: 1ª quarta-feira do mês"
+        },
+        {
+          "dias_semana": [
+            1,
+            3
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "659 229 7438",
+          "senha": "000123",
+          "formatos": [
+            "Ordem de Apresentação",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "659 229 7438",
+          "senha": "000123",
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Ordem de Apresentação",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "659 229 7438",
+          "senha": "000123",
+          "formatos": [
+            "Indicação",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5,
+            6
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "659 229 7438",
+          "senha": "000123",
+          "formatos": [
+            "Ordem de Apresentação",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5,
+            6
+          ],
+          "horario_inicio": "23:59",
+          "horario_fim": "01:59",
+          "app": "Zoom",
+          "zoom_id": "659 229 7438",
+          "senha": "000123",
+          "formatos": [
+            "Ordem de Apresentação",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_amigos_em_recuperacao",
+      "nome": "Grupo Amigos em Recuperação",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            2,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "576 791 0351",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Pode se estender após 23h conforme disponibilidade do Coordenador"
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "576 791 0351",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Literatura",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "576 791 0351",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_5a_tradicao",
+      "nome": "Grupo 5ª Tradição",
+      "cidade": "Maringá",
+      "estado": "Paraná",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões de sábado: Corujão"
+        }
+      ]
+    },
+    {
+      "id": "grupo_quinta_tradicao",
+      "nome": "Grupo Quinta Tradição",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            4
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "23:30",
+          "app": "Zoom",
+          "zoom_id": "443 025 1323",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "443 025 1323",
+          "senha": null,
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_baixada_sem_fronteiras",
+      "nome": "Grupo Baixada Sem Fronteiras",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "797 324 5651",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Dom: Temáticas até 23h, depois Partilhas. Seg: Temática"
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "797 324 5651",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_catete",
+      "nome": "Grupo Catete",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            2,
+            5
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "558 128 221",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_corujao_brasil",
+      "nome": "Grupo Corujão Brasil",
+      "cidade": "Fortaleza",
+      "estado": "Ceará",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "999 111 1953",
+          "senha": "30035222",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_recreio_online",
+      "nome": "Grupo Recreio On-line",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "847 0939 2930",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Seg: Estudo de Tradições. Qua: Aberta para visitantes"
+        }
+      ]
+    },
+    {
+      "id": "grupo_pedra_do_pontal",
+      "nome": "Grupo Pedra do Pontal",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "913 379 8128",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Sex: Temática. Ter: Aberta para visitantes"
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "913 379 8128",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_adictos_jandira_itapevi",
+      "nome": "Grupo Adictos Jandira & Itapevi",
+      "cidade": "Itapevi",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            5
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Qui: Aberta para visitantes"
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_nabr",
+      "nome": "Grupo @nabr",
+      "cidade": "Porto Alegre",
+      "estado": "Rio Grande do Sul",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "12:00",
+          "horario_fim": "13:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reunião por WhatsApp"
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "19:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "20:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "22:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_principios_orientadores",
+      "nome": "Grupo Princípios Orientadores",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            2,
+            4,
+            5,
+            6
+          ],
+          "horario_inicio": "15:00",
+          "horario_fim": "17:00",
+          "app": "Zoom",
+          "zoom_id": "606 060 1953",
+          "senha": "000000",
+          "formatos": [
+            "Estudos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "23:00",
+          "app": "Zoom",
+          "zoom_id": "606 060 1953",
+          "senha": "000000",
+          "formatos": [
+            "Estudos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "606 060 1953",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_reuniao_sistema_rad",
+      "nome": "Grupo Reunião Sistema RAD",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "999 888 6262",
+          "senha": "2014",
+          "formatos": [
+            "Estudo do guia de passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "999 888 6262",
+          "senha": "2014",
+          "formatos": [
+            "Estudo da Meditação Diária",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "20:30",
+          "app": "Zoom",
+          "zoom_id": "999 888 6262",
+          "senha": "2014",
+          "formatos": [
+            "Hibrida (virtual e presencial)"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Rio de Janeiro/RJ"
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "16:00",
+          "horario_fim": "18:00",
+          "app": "Zoom",
+          "zoom_id": "999 888 6262",
+          "senha": "2014",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "999 888 6262",
+          "senha": "2014",
+          "formatos": [
+            "Estudo da Meditação Diária",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Belo Horizonte/MG"
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "08:00",
+          "horario_fim": "10:00",
+          "app": "Zoom",
+          "zoom_id": "999 888 6262",
+          "senha": "2014",
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "999 888 6262",
+          "senha": "2014",
+          "formatos": [
+            "Estudo dos Princípios Orientadores",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "20:30",
+          "app": "Zoom",
+          "zoom_id": "999 888 6262",
+          "senha": "2014",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Rio de Janeiro/RJ"
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "23:00",
+          "horario_fim": "01:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_os_lacos_que_nos_unem",
+      "nome": "Grupo Os Laços Que Nos Unem",
+      "cidade": "Feira de Santana",
+      "estado": "Bahia",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "16:00",
+          "horario_fim": "18:00",
+          "app": "Zoom",
+          "zoom_id": "535 280 5398",
+          "senha": "002024",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Qua e Qui: 15:00 às 16:30"
+        },
+        {
+          "dias_semana": [
+            2,
+            4,
+            5
+          ],
+          "horario_inicio": "15:00",
+          "horario_fim": "16:30",
+          "app": "Zoom",
+          "zoom_id": "535 280 5398",
+          "senha": "002024",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_novo_belo_horizonte",
+      "nome": "Grupo Novo Belo Horizonte",
+      "cidade": "Belo Horizonte",
+      "estado": "Minas Gerais",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "217 670 0817",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "17:30",
+          "horario_fim": "18:30",
+          "app": "Zoom",
+          "zoom_id": "217 670 0817",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "17:30",
+          "horario_fim": "18:30",
+          "app": "Zoom",
+          "zoom_id": "217 670 0817",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            4,
+            5
+          ],
+          "horario_inicio": "17:30",
+          "horario_fim": "18:30",
+          "app": "Zoom",
+          "zoom_id": "217 670 0817",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_elas_salvador",
+      "nome": "Grupo Elas",
+      "cidade": "Salvador",
+      "estado": "Bahia",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "19:30",
+          "app": "Zoom",
+          "zoom_id": "531 965 3538",
+          "senha": "000000",
+          "formatos": [
+            "Interesse feminino",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Sistema RAD"
+        },
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "20:30",
+          "app": "Zoom",
+          "zoom_id": "531 965 3538",
+          "senha": "000000",
+          "formatos": [
+            "Interesse feminino",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Sistema RAD"
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "11:30",
+          "app": "Zoom",
+          "zoom_id": "531 965 3538",
+          "senha": "000000",
+          "formatos": [
+            "Interesse feminino",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Sistema RAD"
+        }
+      ]
+    },
+    {
+      "id": "grupo_elas_porto_alegre",
+      "nome": "Grupo Elas",
+      "cidade": "Porto Alegre",
+      "estado": "Rio Grande do Sul",
+      "sessoes": [
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "839 9270 0876",
+          "senha": null,
+          "formatos": [
+            "Interesse feminino",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_prece_e_meditacao_online",
+      "nome": "Grupo Prece e Meditação On-line",
+      "cidade": "Brasília",
+      "estado": "Distrito Federal",
+      "sessoes": [
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "477 162 7943",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Estudo do Isto Resulta",
+            "Estudo do guia de passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "3ª quinta: Temática"
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "10:00",
+          "horario_fim": "12:00",
+          "app": "Zoom",
+          "zoom_id": "477 162 7943",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Estudos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_viver_limpo_bsb",
+      "nome": "Grupo Viver Limpo",
+      "cidade": "Brasília",
+      "estado": "Distrito Federal",
+      "sessoes": [
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "763 279 2200",
+          "senha": "226336",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "22:30",
+          "app": "Zoom",
+          "zoom_id": "763 279 2200",
+          "senha": "226336",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_so_por_hoje_bsb",
+      "nome": "Grupo Só Por Hoje",
+      "cidade": "Brasília",
+      "estado": "Distrito Federal",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "926 5530 7013",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_uniao_virtual_canoas",
+      "nome": "Grupo União Virtual",
+      "cidade": "Canoas",
+      "estado": "Rio Grande do Sul",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "224 992 8383",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": "Fuso: GMT -2"
+        },
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "21:00",
+          "horario_fim": "22:30",
+          "app": "Zoom",
+          "zoom_id": "224 992 8383",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Fortaleza",
+          "notas": "Fuso: GMT -2"
+        }
+      ]
+    },
+    {
+      "id": "grupo_unidade_proposito_roraima",
+      "nome": "Grupo Unidade & Propósito Roraima",
+      "cidade": "Boa Vista",
+      "estado": "Roraima",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "19:30",
+          "app": "Zoom",
+          "zoom_id": "916 4058 8499",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Literatura",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Boa_Vista",
+          "notas": "Fuso: GMT -4"
+        }
+      ]
+    },
+    {
+      "id": "grupo_novo_mundo_cataguases",
+      "nome": "Grupo Novo Mundo",
+      "cidade": "Cataguases",
+      "estado": "Minas Gerais",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "18:30",
+          "horario_fim": "20:30",
+          "app": "Zoom",
+          "zoom_id": "384 884 6526",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_forca_jovem_cataguases",
+      "nome": "Grupo Força Jovem",
+      "cidade": "Cataguases",
+      "estado": "Minas Gerais",
+      "sessoes": [
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "384 884 6526",
+          "senha": "000000",
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_csa_minas",
+      "nome": "Grupo CSA Minas",
+      "cidade": "Cataguases",
+      "estado": "Minas Gerais",
+      "sessoes": [
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "527 414 6396",
+          "senha": null,
+          "formatos": [
+            "Temática",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_sem_fronteiras_contagem",
+      "nome": "Grupo Sem Fronteiras",
+      "cidade": "Contagem",
+      "estado": "Minas Gerais",
+      "sessoes": [
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "890 0741 8194",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_abraco_virtual_online",
+      "nome": "Grupo Abraço Virtual On-line",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            4
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "608 126 4314",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_bem_vindo_bh",
+      "nome": "Grupo Bem-vindo",
+      "cidade": "Belo Horizonte",
+      "estado": "Minas Gerais",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "890 0741 8194",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_positivos_online",
+      "nome": "Grupo Positivos On-line",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "377 668 4337",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_reuniao_em_libras",
+      "nome": "Grupo Reunião em LIBRAS",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "999 222 1953",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Apenas na 3ª segunda-feira do mês. Com intérprete de Libras e audiodescrição"
+        }
+      ]
+    },
+    {
+      "id": "grupo_santo_amaro_sp",
+      "nome": "Grupo Santo Amaro",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "21:30",
+          "horario_fim": "22:30",
+          "app": "Zoom",
+          "zoom_id": "839 7285 2271",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Tradições",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "1º domingo do mês. LIBRAS e audiodescrição. PCD's bem-vindos"
+        },
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "12:00",
+          "horario_fim": "13:00",
+          "app": "Zoom",
+          "zoom_id": "839 7285 2271",
+          "senha": "000000",
+          "formatos": [
+            "Estudo do livro Viver Limpo",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "2ª segunda-feira do mês tem intérprete de Libras. Audiodescrição sempre"
+        },
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "12:00",
+          "horario_fim": "13:00",
+          "app": "Zoom",
+          "zoom_id": "839 7285 2271",
+          "senha": "000000",
+          "formatos": [
+            "Estudo de Passos",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Estudo dos 12 passos pelo Texto Básico. Audiodescrição"
+        },
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "12:00",
+          "horario_fim": "13:00",
+          "app": "Zoom",
+          "zoom_id": "839 7285 2271",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "3º sábado: reunião de SINAIS com intérprete de Libras"
+        }
+      ]
+    },
+    {
+      "id": "grupo_unidade_virtual_rj",
+      "nome": "Grupo Unidade Virtual",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            6
+          ],
+          "horario_inicio": "21:30",
+          "horario_fim": "23:30",
+          "app": "Zoom",
+          "zoom_id": "850 4322 5943",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_gana_sao_luis",
+      "nome": "Grupo Gana",
+      "cidade": "São Luís",
+      "estado": "Maranhão",
+      "sessoes": [
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "19:00",
+          "horario_fim": "21:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_na_estrada",
+      "nome": "Grupo NA Estrada",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "20:30",
+          "horario_fim": "21:30",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Temática toda 3ª quarta-feira do mês. Reunião de serviço: última quarta-feira"
+        }
+      ]
+    },
+    {
+      "id": "grupo_tamo_junto_online",
+      "nome": "Grupo Tamo Junto On-line",
+      "cidade": "João Pessoa",
+      "estado": "Paraíba",
+      "sessoes": [
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "17:00",
+          "horario_fim": "19:00",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "1ª Ter: Funciona, Como e Porquê; 2ª: Viver Limpo; 3ª: Apadrinhamento; 4ª: Guia Passos; 5ª: Aberta"
+        }
+      ]
+    },
+    {
+      "id": "grupo_oportunidade_ao_sol",
+      "nome": "Grupo Oportunidade ao Sol",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro",
+      "sessoes": [
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "816 729 8974",
+          "senha": "000000",
+          "formatos": [
+            "Estudo dos Princípios Orientadores",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_continue_partilhando",
+      "nome": "Grupo Continue Partilhando",
+      "cidade": "Belém",
+      "estado": "Pará",
+      "sessoes": [
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "448 885 8220",
+          "senha": "000000",
+          "formatos": [
+            "Participativa",
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Apresentação por audiodescrição quando houver pessoas com necessidades adicionais"
+        }
+      ]
+    },
+    {
+      "id": "grupo_caminho_e_verdade",
+      "nome": "Grupo Caminho e Verdade",
+      "cidade": "Juiz de Fora",
+      "estado": "Minas Gerais",
+      "sessoes": [
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:00",
+          "app": "Zoom",
+          "zoom_id": "999 333 1953",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_mossoró",
+      "nome": "Grupo Mossoró",
+      "cidade": "Mossoró",
+      "estado": "Rio Grande do Norte",
+      "sessoes": [
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "19:30",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "914 528 4993",
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_aceitacao_fe_compromisso",
+      "nome": "Grupo Aceitação, Fé e Compromisso",
+      "cidade": null,
+      "estado": "Bahia",
+      "sessoes": [
+        {
+          "dias_semana": [
+            3,
+            4,
+            5
+          ],
+          "horario_inicio": "15:00",
+          "horario_fim": "16:30",
+          "app": "Zoom",
+          "zoom_id": "443 025 1323",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_brooklin",
+      "nome": "Grupo Brooklin",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            3
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "795 624 0465",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_juntas_somos_mais_fortes",
+      "nome": "Grupo Juntas Somos Mais Fortes",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "08:00",
+          "horario_fim": "10:00",
+          "app": "Zoom",
+          "zoom_id": "443 025 1323",
+          "senha": "30035222",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        },
+        {
+          "dias_semana": [
+            2,
+            4
+          ],
+          "horario_inicio": "15:00",
+          "horario_fim": "17:00",
+          "app": "Zoom",
+          "zoom_id": "443 025 1323",
+          "senha": "30035222",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_virtual_csa_sem_fronteiras",
+      "nome": "Grupo Virtual CSA Sem Fronteiras",
+      "cidade": null,
+      "estado": "Paraná",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "09:00",
+          "horario_fim": "10:30",
+          "app": "Zoom",
+          "zoom_id": "860 6565 9424",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Estudo de Tradições: 1º domingo do mês"
+        }
+      ]
+    },
+    {
+      "id": "grupo_ajuri",
+      "nome": "Grupo Ajuri",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "11:00",
+          "horario_fim": "13:00",
+          "app": "Zoom",
+          "zoom_id": "999 111 1953",
+          "senha": "30035222",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões Quinzenais: 1ª e 3ª semana do mês"
+        }
+      ]
+    },
+    {
+      "id": "grupo_imbui",
+      "nome": "Grupo Imbui",
+      "cidade": "Salvador",
+      "estado": "Bahia",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "09:30",
+          "horario_fim": "11:30",
+          "app": "Zoom",
+          "zoom_id": "916 4058 8499",
+          "senha": "427819",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_campo_santo_salvador",
+      "nome": "Grupo Campo Santo",
+      "cidade": "Salvador",
+      "estado": "Bahia",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0,
+            6
+          ],
+          "horario_inicio": "17:00",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "947 3900 9084",
+          "senha": "sph",
+          "formatos": [
+            "Hibrida (virtual e presencial)"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Rua Teixeira Mendes 83, Alto das Pombas, Salvador/BA. Feriados: 17h às 19h. Carimbo justiça. Acesso parcial cadeirantes"
+        }
+      ]
+    },
+    {
+      "id": "grupo_unidos_venceremos_dom",
+      "nome": "Grupo Unidos Venceremos",
+      "cidade": "São Paulo",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            0
+          ],
+          "horario_inicio": "14:00",
+          "horario_fim": "16:00",
+          "app": "Zello",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Reuniões Abertas: Último domingo do mês e feriados"
+        }
+      ]
+    },
+    {
+      "id": "grupo_liberdade_sp",
+      "nome": "Grupo Liberdad",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "777 000 1988",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "grupo_recuperacao_em_3d",
+      "nome": "Grupo Recuperação em 3D",
+      "cidade": null,
+      "estado": null,
+      "sessoes": [
+        {
+          "dias_semana": [
+            6
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Outro",
+          "zoom_id": null,
+          "senha": null,
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Acesso somente pelo computador usando o Google Chrome"
+        }
+      ]
+    },
+    {
+      "id": "grupo_sul_da_ilha",
+      "nome": "Grupo Sul da Ilha",
+      "cidade": "Florianópolis",
+      "estado": "Santa Catarina",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "22:00",
+          "horario_fim": "00:00",
+          "app": "Zoom",
+          "zoom_id": "457 368 9331",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Fuso horário: GMT -3"
+        }
+      ]
+    },
+    {
+      "id": "grupo_despertar_rubineia",
+      "nome": "Grupo Despertar",
+      "cidade": "Rubinéia",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "555 132 0800",
+          "senha": "000000",
+          "formatos": [
+            "Hibrida (virtual e presencial)",
+            "Funciona em Feriados"
+          ],
+          "tipo_acesso": "aberta",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Rua Castro Alves 540, Centro. Ao lado do CRAS. Reuniões Abertas: 1ª segunda-feira do mês. Acesso parcial a cadeirantes"
+        }
+      ]
+    },
+    {
+      "id": "grupo_barreiras",
+      "nome": "Grupo Barreiras",
+      "cidade": "Barreiras",
+      "estado": "Bahia",
+      "sessoes": [
+        {
+          "dias_semana": [
+            2
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "22:00",
+          "app": "Zoom",
+          "zoom_id": "916 4058 8499",
+          "senha": "000000",
+          "formatos": [
+            "Hibrida (virtual e presencial)",
+            "Funciona em Feriados"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Rua Marechal Hermes 629, Primavera. Anexo à Paróquia N.S. do Perpétuo Socorro, Salão Paroquial - Sala 03"
+        }
+      ]
+    },
+    {
+      "id": "grupo_mensagem_campinas",
+      "nome": "Grupo Mensagem",
+      "cidade": "Campinas",
+      "estado": "São Paulo",
+      "sessoes": [
+        {
+          "dias_semana": [
+            4
+          ],
+          "horario_inicio": "20:00",
+          "horario_fim": "21:30",
+          "app": "Zoom",
+          "zoom_id": "580 780 0800",
+          "senha": "000000",
+          "formatos": [
+            "Hibrida (virtual e presencial)",
+            "Funciona em Feriados"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Rua Carlos Serra do Amaral 100, Vila 31 de Março. Igreja Sagrada Família. Acesso parcial a cadeirantes"
+        }
+      ]
+    },
+    {
+      "id": "grupo_libertador_manaus",
+      "nome": "Grupo Libertador",
+      "cidade": "Manaus",
+      "estado": "Amazonas",
+      "sessoes": [
+        {
+          "dias_semana": [
+            5
+          ],
+          "horario_inicio": "18:00",
+          "horario_fim": "20:00",
+          "app": "Zoom",
+          "zoom_id": "305 827 2888",
+          "senha": "000000",
+          "formatos": [
+            "Hibrida (virtual e presencial)",
+            "Funciona em Feriados"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Boa_Vista",
+          "notas": "Rua Isairina Braga 344, Compensa I. Igreja Cristo Libertador. Fuso: GMT -4. Carimbo justiça. Acesso total a cadeirantes (inclui banheiro)"
+        }
+      ]
+    },
+    {
+      "id": "grupo_esperanca_catalao",
+      "nome": "Grupo Esperança",
+      "cidade": "Catalão",
+      "estado": "Goiás",
+      "sessoes": [
+        {
+          "dias_semana": [
+            1,
+            2,
+            4,
+            6
+          ],
+          "horario_inicio": "08:00",
+          "horario_fim": "10:00",
+          "app": "Zoom",
+          "zoom_id": "448 734 4400",
+          "senha": "000000",
+          "formatos": [
+            "Reunião Virtual"
+          ],
+          "tipo_acesso": "fechada",
+          "timezone": "America/Sao_Paulo",
+          "notas": "Usa mesmo Zoom ID do Grupo Esperança principal"
+        }
+      ]
+    }
+  ]
+}
