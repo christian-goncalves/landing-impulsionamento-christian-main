@@ -1,0 +1,14 @@
+{
+  "normalized": [
+    {
+      "key": "grupo sem link|3|19:00|20:00|zoom|",
+      "group": "Grupo Sem Link",
+      "weekday": 3,
+      "start_time": "19:00",
+      "end_time": "20:00",
+      "platform": "Zoom",
+      "meeting_id": "",
+      "meeting_url": ""
+    }
+  ]
+}

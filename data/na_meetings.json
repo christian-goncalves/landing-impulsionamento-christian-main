@@ -1821,6 +1821,7 @@
         }
       ]
     },
+    
     {
       "id": "grupo_fenix_de_na",
       "nome": "Grupo Fênix de NA",
@@ -1848,6 +1849,7 @@
           "timezone": "America/Sao_Paulo",
           "notas": null
         },
+        
         {
           "dias_semana": [
             6

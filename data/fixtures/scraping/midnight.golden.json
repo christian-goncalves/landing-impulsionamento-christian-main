@@ -1,0 +1,14 @@
+{
+  "normalized": [
+    {
+      "key": "grupo madrugada|6|23:30|00:30|zoom|777 888 9999",
+      "group": "Grupo Madrugada",
+      "weekday": 6,
+      "start_time": "23:30",
+      "end_time": "00:30",
+      "platform": "Zoom",
+      "meeting_id": "777 888 9999",
+      "meeting_url": ""
+    }
+  ]
+}

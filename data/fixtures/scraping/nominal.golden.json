@@ -1,0 +1,24 @@
+{
+  "normalized": [
+    {
+      "key": "grupo aurora|1|08:00|09:00|zoom|111 222 3333",
+      "group": "Grupo Aurora",
+      "weekday": 1,
+      "start_time": "08:00",
+      "end_time": "09:00",
+      "platform": "Zoom",
+      "meeting_id": "111 222 3333",
+      "meeting_url": "https://zoom.us/j/1112223333"
+    },
+    {
+      "key": "grupo serenidade|2|10:30|11:30|zoom|444 555 6666",
+      "group": "Grupo Serenidade",
+      "weekday": 2,
+      "start_time": "10:30",
+      "end_time": "11:30",
+      "platform": "Zoom",
+      "meeting_id": "444 555 6666",
+      "meeting_url": "https://zoom.us/j/4445556666"
+    }
+  ]
+}

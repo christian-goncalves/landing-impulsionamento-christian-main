@@ -1,0 +1,12 @@
+{
+  "items": [
+    "invalid-item",
+    {
+      "group": "Grupo Incompleto",
+      "weekday": "xpto",
+      "start_time": "25:99",
+      "end_time": "00:00",
+      "platform": "Zoom"
+    }
+  ]
+}

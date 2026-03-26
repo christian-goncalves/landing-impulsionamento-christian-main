@@ -12,6 +12,7 @@ const runtimeDir = path.join(process.cwd(), "data", "runtime")
 const currentPayloadFile = path.join(runtimeDir, "current_payload_v1.json")
 const lastSnapshotFile = path.join(runtimeDir, "last_valid_snapshot_v1.json")
 const syncStateFile = path.join(runtimeDir, "sync_state.json")
+const qualityDir = path.join(runtimeDir, "quality")
 
 const defaultSyncState: SyncState = {
   sourceDown: false,
@@ -60,6 +61,15 @@ export async function readSyncState(): Promise<SyncState> {
 
 export async function writeSyncState(state: SyncState): Promise<void> {
   await writeJsonFile(syncStateFile, state)
+}
+
+export async function writeQualityReport(
+  report: unknown,
+  fileName = "latest_quality_report.json"
+): Promise<void> {
+  await fs.mkdir(qualityDir, { recursive: true })
+  const target = path.join(qualityDir, fileName)
+  await fs.writeFile(target, JSON.stringify(report, null, 2), "utf8")
 }
 
 export function resolveSourceStatus(

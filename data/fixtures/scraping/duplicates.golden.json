@@ -1,0 +1,14 @@
+{
+  "normalized": [
+    {
+      "key": "grupo repetido|5|18:00|19:00|zoom|123 123 1234",
+      "group": "Grupo Repetido",
+      "weekday": 5,
+      "start_time": "18:00",
+      "end_time": "19:00",
+      "platform": "Zoom",
+      "meeting_id": "123 123 1234",
+      "meeting_url": ""
+    }
+  ]
+}

@@ -8,7 +8,7 @@ export interface Sessao {
   zoom_id: string | null
   senha: string | null
   formatos: string[]
-  tipo_acesso: string
+  tipo_acesso: "aberta" | "fechada" | "estudo"
   timezone: string
   notas: string | null
 }
@@ -138,6 +138,10 @@ export async function getMeetingsFromApi(
 }
 
 export function getMeetings(): MeetingsResult {
+  return getMeetingsFromGroups((meetingsData as { grupos: Grupo[] }).grupos)
+}
+
+export function getMeetingsFromGroups(grupos: Grupo[]): MeetingsResult {
   const now = new Date(
     new Date().toLocaleString("en-US", { timeZone: "America/Sao_Paulo" })
   )
@@ -150,7 +154,7 @@ export function getMeetings(): MeetingsResult {
   const iniciandoEmBreve: SessaoAtiva[] = []
   const proximas: SessaoAtiva[] = []
 
-  for (const grupo of (meetingsData as { grupos: Grupo[] }).grupos) {
+  for (const grupo of grupos) {
     for (const sessao of grupo.sessoes) {
       const inicio = toMinutes(sessao.horario_inicio)
       const fim = toMinutes(sessao.horario_fim)

@@ -46,11 +46,9 @@ const priorityStyles = {
 type TipoReuniao = "estudo" | "aberta" | "fechada"
 
 function getTipo(sessao: SessaoAtiva["sessao"]): TipoReuniao {
-  const temEstudo = sessao.formatos.some(
-    f => f.toLowerCase().startsWith("estudo") || f === "Estudos"
-  )
-  if (temEstudo) return "estudo"
-  return sessao.tipo_acesso === "aberta" ? "aberta" : "fechada"
+  if (sessao.tipo_acesso === "estudo") return "estudo"
+  if (sessao.tipo_acesso === "aberta") return "aberta"
+  return "fechada"
 }
 
 // ── Badge de tipo ───────────────────────────────────────────────────────────
