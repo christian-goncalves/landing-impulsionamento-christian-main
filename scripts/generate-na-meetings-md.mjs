@@ -19,6 +19,10 @@ const DAY_LABELS = [
   "Sábado",
 ]
 
+// Ordem de semana iniciando na segunda:
+// Seg(1), Ter(2), Qua(3), Qui(4), Sex(5), Sab(6), Dom(0)
+const WEEKDAY_SORT_ORDER = [1, 2, 3, 4, 5, 6, 0]
+
 async function main() {
   await generateOnce()
 
@@ -99,9 +103,14 @@ function buildRows(payload) {
   }
 
   rows.sort((a, b) => {
-    if (a.diaIndex !== b.diaIndex) return a.diaIndex - b.diaIndex
-    if (a.inicio !== b.inicio) return a.inicio.localeCompare(b.inicio, "pt-BR")
-    return a.evento.localeCompare(b.evento, "pt-BR")
+    const byEvento = a.evento.localeCompare(b.evento, "pt-BR")
+    if (byEvento !== 0) return byEvento
+
+    const aDayPos = WEEKDAY_SORT_ORDER.indexOf(a.diaIndex)
+    const bDayPos = WEEKDAY_SORT_ORDER.indexOf(b.diaIndex)
+    if (aDayPos !== bDayPos) return aDayPos - bDayPos
+
+    return a.inicio.localeCompare(b.inicio, "pt-BR")
   })
 
   return rows
@@ -151,4 +160,3 @@ function esc(value) {
 }
 
 void main()
-
