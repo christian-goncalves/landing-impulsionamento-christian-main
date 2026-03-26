@@ -1,9 +1,13 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Radio, Clock, ChevronDown, ChevronUp } from "lucide-react"
+import { Radio, Clock, ChevronDown, ChevronUp, AlertTriangle } from "lucide-react"
 import { MeetingCard } from "./meeting-card"
-import { getMeetings, type MeetingsResult } from "@/lib/meetings"
+import {
+  getMeetingsFromApi,
+  type MeetingsResult,
+  type MeetingsFetchMeta,
+} from "@/lib/meetings"
 
 function useMeetings(interval = 30000) {
   const [result, setResult] = useState<MeetingsResult>({
@@ -11,13 +15,62 @@ function useMeetings(interval = 30000) {
     iniciandoEmBreve: [],
     proximas: [],
   })
+  const [meta, setMeta] = useState<MeetingsFetchMeta>({
+    sourceStatus: "ok",
+    lastSyncAt: null,
+    serverTime: null,
+    usingLocalFallback: false,
+    error: null,
+  })
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
-    function update() { setResult(getMeetings()) }
-    update()
-    const i = setInterval(update, interval)
-    return () => clearInterval(i)
+    let active = true
+
+    async function update() {
+      const next = await getMeetingsFromApi()
+      if (!active) return
+
+      setResult(next.data)
+      setMeta(next.meta)
+      setLoading(false)
+    }
+
+    void update()
+    const i = setInterval(() => void update(), interval)
+    return () => {
+      active = false
+      clearInterval(i)
+    }
   }, [interval])
-  return result
+
+  return { result, meta, loading }
+}
+
+function StatusIndicator({ meta }: { meta: MeetingsFetchMeta }) {
+  if (meta.sourceStatus === "ok") return null
+
+  const fallbackText = meta.usingLocalFallback
+    ? "Dados em contingência local temporária."
+    : "Dados em contingência."
+  const staleText = "Dados desatualizados no momento. Exibindo último snapshot válido."
+
+  const isStale = meta.sourceStatus === "stale"
+
+  return (
+    <div
+      className={`mb-4 rounded-xl border px-3 py-2 text-sm ${
+        isStale
+          ? "border-amber-300 bg-amber-50 text-amber-900"
+          : "border-blue-200 bg-blue-50 text-blue-900"
+      }`}
+    >
+      <div className="flex items-center gap-2">
+        <AlertTriangle className="h-4 w-4 flex-shrink-0" />
+        <span>{isStale ? staleText : fallbackText}</span>
+      </div>
+    </div>
+  )
 }
 
 // ── Legenda de tipos — componente único reutilizável ───────────────────────
@@ -47,10 +100,11 @@ function LegendaTipos() {
   )
 }
 
-// ── Seção 1 — Em Andamento ──────────────────────────────────────────────────
-export function EmAndamento() {
-  const { emAndamento } = useMeetings()
-
+export function EmAndamento({
+  emAndamento,
+}: {
+  emAndamento: MeetingsResult["emAndamento"]
+}) {
   if (emAndamento.length === 0) {
     return (
       <div id="andamento" className="text-center py-6 text-muted-foreground text-sm">
@@ -84,11 +138,11 @@ export function EmAndamento() {
   )
 }
 
-// ── Seção 2 — Iniciando em Breve (≤ 90 min) ────────────────────────────────
-export function IniciandoEmBreve() {
-  const { iniciandoEmBreve } = useMeetings()
-
-  // Mostra a seção mesmo vazia, com estado informativo
+export function IniciandoEmBreve({
+  iniciandoEmBreve,
+}: {
+  iniciandoEmBreve: MeetingsResult["iniciandoEmBreve"]
+}) {
   return (
     <div id="iniciando">
       <div className="flex items-center gap-2 mb-4">
@@ -123,9 +177,11 @@ export function IniciandoEmBreve() {
   )
 }
 
-// ── Seção 3 — Próximas Reuniões ────────────────────────────────────────────
-export function ProximasReunioes() {
-  const { proximas } = useMeetings()
+export function ProximasReunioes({
+  proximas,
+}: {
+  proximas: MeetingsResult["proximas"]
+}) {
   const [expanded, setExpanded] = useState(false)
 
   if (proximas.length === 0) return null
@@ -164,21 +220,27 @@ export function ProximasReunioes() {
         >
           {expanded
             ? <><ChevronUp className="w-4 h-4" /> Mostrar menos</>
-            : <><ChevronDown className="w-4 h-4" /> Ver todas </>
-          }
+            : <><ChevronDown className="w-4 h-4" /> Ver todas </>}
         </button>
       )}
     </div>
   )
 }
 
-// ── Bloco completo ─────────────────────────────────────────────────────────
 export function ReunioesSection() {
+  const { result, meta, loading } = useMeetings()
+
   return (
     <div className="flex flex-col gap-10">
-      <EmAndamento />
-      <IniciandoEmBreve />
-      <ProximasReunioes />
+      <StatusIndicator meta={meta} />
+      {loading ? (
+        <div className="text-center py-5 text-muted-foreground text-sm border border-dashed border-border rounded-xl">
+          Carregando reuniões...
+        </div>
+      ) : null}
+      <EmAndamento emAndamento={result.emAndamento} />
+      <IniciandoEmBreve iniciandoEmBreve={result.iniciandoEmBreve} />
+      <ProximasReunioes proximas={result.proximas} />
     </div>
   )
 }

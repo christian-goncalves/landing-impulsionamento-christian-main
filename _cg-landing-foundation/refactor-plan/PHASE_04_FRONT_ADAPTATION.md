@@ -26,6 +26,12 @@ Adaptar frontend para consumo contratual (`ApiPayloadV1`) sem regressão visual/
 - `sourceStatus=fallback`: render normal + indicador discreto de contingência.
 - `sourceStatus=stale`: render com aviso de desatualização.
 
+## Execução realizada
+- `lib/meetings.ts` atualizado com `getMeetingsFromApi` + fallback local temporário.
+- `components/meetings-client.tsx` migrado para hook assíncrono único com polling.
+- Status indicator adicionado sem redesign da interface.
+- Estrutura das seções (`andamento`, `iniciando`, `proximas`) preservada.
+
 ## Critérios de entrada
 - Política de fallback da fase 03 definida.
 - Contrato V1 estável.
@@ -33,6 +39,7 @@ Adaptar frontend para consumo contratual (`ApiPayloadV1`) sem regressão visual/
 ## Entregáveis da fase
 - Plano de transição do `lib/meetings.ts` para fonte contratual.
 - Regras de exibição para estados operacionais.
+- Implementação de consumo frontend via API interna.
 
 ## Critérios de saída
 - Sem regressão nas seções: `emAndamento`, `iniciandoEmBreve`, `proximas`.
@@ -44,3 +51,4 @@ Adaptar frontend para consumo contratual (`ApiPayloadV1`) sem regressão visual/
 - [x] Mapeamento para UI atual definido.
 - [x] Estados de contingência definidos.
 - [x] Plano de rollout frontend definido.
+- [x] Implementação concluída e validada em build/lint/runtime.

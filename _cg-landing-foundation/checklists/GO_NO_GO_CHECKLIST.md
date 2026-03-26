@@ -15,6 +15,7 @@
 - [x] Sinalização de status para frontend validada.
 
 ### Frontend
+- [x] Frontend consumindo `GET /api/reunioes-virtuais` como fonte primária.
 - [x] Build de produção executado com sucesso.
 - [x] Lint executado sem erros.
 - [x] Seções `emAndamento`, `iniciandoEmBreve`, `proximas` confirmadas em código.

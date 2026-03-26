@@ -1,19 +1,29 @@
 ﻿{
-    "sync_ok":  true,
-    "after_sync":  {
-                       "sourceStatus":  "ok",
-                       "lastSyncAt":  "2026-03-26T19:35:17.649Z"
-                   },
-    "after_fallback":  {
-                           "sourceStatus":  "fallback",
-                           "lastSyncAt":  "2026-03-26T19:35:17.649Z"
-                       },
-    "after_stale":  {
-                        "sourceStatus":  "stale",
-                        "lastSyncAt":  "2026-03-26T19:35:17.649Z"
+    "run_at":  "2026-03-26T16:51:19-03:00",
+    "sync_manual":  {
+                        "ok":  true,
+                        "lastSyncAt":  "2026-03-26T19:51:18.424Z",
+                        "counters":  {
+                                         "emAndamento":  10,
+                                         "iniciandoEmBreve":  5,
+                                         "proximas":  52
+                                     }
                     },
-    "after_recover":  {
-                          "sourceStatus":  "ok",
-                          "lastSyncAt":  "2026-03-26T19:35:17.649Z"
-                      }
+    "payload_after_sync":  {
+                               "sourceStatus":  "ok",
+                               "lastSyncAt":  "2026-03-26T19:51:18.424Z",
+                               "hasArrays":  true
+                           },
+    "payload_after_fallback":  {
+                                   "sourceStatus":  "fallback",
+                                   "lastSyncAt":  "2026-03-26T19:51:18.424Z"
+                               },
+    "payload_after_stale":  {
+                                "sourceStatus":  "stale",
+                                "lastSyncAt":  "2026-03-26T19:51:18.424Z"
+                            },
+    "payload_after_recover":  {
+                                  "sourceStatus":  "ok",
+                                  "lastSyncAt":  "2026-03-26T19:51:18.424Z"
+                              }
 }
