@@ -82,3 +82,12 @@
 - **Decisão**: A landing passa a executar scraping interno e normalização canônica de acesso: `is_study=1 -> estudo`, senão `is_open=1 -> aberta`, senão `fechada`.
 - **Impacto**: `sessao.tipo_acesso` torna-se fonte única de verdade para a UI; elimina dependência de CSV manual como fonte operacional.
 - **Status**: approved
+
+## DECISION-010
+- **ID**: DECISION-010
+- **Data**: 2026-03-26
+- **Contexto**: Divergências de status (Fênix/Largo) causadas por fonte legada usada em visualização humana e fallback local.
+- **Decisão**: Fonte operacional única passa a ser o runtime de scraping interno (data/runtime/current_groups.json). data/na_meetings.json permanece apenas como legado temporário e fallback opcional por flag.
+- **Impacto**: 
+a_meetings.md passa a ser gerado do runtime por padrão; classificação e consumo ficam alinhados ao padrão do NA_virtual_clone.
+- **Status**: approved

@@ -26,6 +26,10 @@ export async function GET() {
     1,
     Number(process.env.MEETINGS_STALE_THRESHOLD_MINUTES ?? 180)
   )
+  const syncIntervalMinutes = Math.max(
+    1,
+    Number(process.env.MEETINGS_SYNC_INTERVAL_MINUTES ?? 30)
+  )
 
   if (syncState.sourceDown) {
     const base = snapshotPayload ?? currentPayload ?? buildPayloadV1("fallback")
@@ -50,9 +54,38 @@ export async function GET() {
   }
 
   if (currentGroups && currentGroups.length > 0) {
-    return NextResponse.json(
-      buildPayloadV1("ok", getMeetingsFromGroups(currentGroups), currentPayload?.lastSyncAt ?? null)
-    )
+    const lastSyncAt = currentPayload?.lastSyncAt ?? snapshotPayload?.lastSyncAt ?? null
+
+    if (shouldAttemptScheduledSync(lastSyncAt, syncIntervalMinutes)) {
+      try {
+        const scrapeResult = await scrapeNaVirtualMeetings()
+        const nowIso = new Date().toISOString()
+        const payload = buildPayloadV1("ok", scrapeResult.meetingsResult, nowIso)
+        await writeCurrentPayload(payload)
+        await writeLastSnapshot(payload)
+        await writeCurrentGroups(scrapeResult.groups)
+        await writeLastGroupsSnapshot(scrapeResult.groups)
+        await writeSyncState({
+          sourceDown: false,
+          failMode: null,
+          lastFailureAt: null,
+        })
+
+        return NextResponse.json(payload)
+      } catch {
+        await writeSyncState({
+          sourceDown: true,
+          failMode: "fallback",
+          lastFailureAt: new Date().toISOString(),
+        })
+
+        return NextResponse.json(
+          buildPayloadV1("fallback", getMeetingsFromGroups(currentGroups), lastSyncAt)
+        )
+      }
+    }
+
+    return NextResponse.json(buildPayloadV1("ok", getMeetingsFromGroups(currentGroups), lastSyncAt))
   }
 
   if (currentPayload && (!currentGroups || currentGroups.length === 0)) {
@@ -104,4 +137,20 @@ export async function GET() {
   }
 
   return NextResponse.json(buildPayloadV1("ok"))
+}
+
+function shouldAttemptScheduledSync(
+  lastSyncAt: string | null,
+  syncIntervalMinutes: number
+): boolean {
+  if (!lastSyncAt) {
+    return true
+  }
+
+  const elapsedMs = Date.now() - new Date(lastSyncAt).getTime()
+  if (!Number.isFinite(elapsedMs) || elapsedMs < 0) {
+    return true
+  }
+
+  return elapsedMs / 60000 >= syncIntervalMinutes
 }

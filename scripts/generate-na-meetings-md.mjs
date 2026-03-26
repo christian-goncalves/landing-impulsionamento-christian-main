@@ -4,7 +4,13 @@ import { promises as fs } from "node:fs"
 import { watch } from "node:fs"
 import path from "node:path"
 
-const INPUT_PATH = path.resolve(process.cwd(), "data", "na_meetings.json")
+const PRIMARY_INPUT_PATH = path.resolve(
+  process.cwd(),
+  "data",
+  "runtime",
+  "current_groups.json"
+)
+const LEGACY_INPUT_PATH = path.resolve(process.cwd(), "data", "na_meetings.json")
 const OUTPUT_PATH = path.resolve(process.cwd(), "data", "na_meetings.md")
 const WATCH_MODE = process.argv.includes("--watch")
 const DEBOUNCE_MS = 400
@@ -28,22 +34,30 @@ async function main() {
 
   if (!WATCH_MODE) return
 
-  console.log(`[na-meetings-md] watch ativo: ${INPUT_PATH}`)
+  console.log(
+    `[na-meetings-md] watch ativo: ${PRIMARY_INPUT_PATH} (fallback legado: ${LEGACY_INPUT_PATH})`
+  )
+
   let timer = null
-  watch(INPUT_PATH, () => {
-    if (timer) clearTimeout(timer)
-    timer = setTimeout(() => {
-      void generateOnce()
-    }, DEBOUNCE_MS)
-  })
+  const watched = [PRIMARY_INPUT_PATH, LEGACY_INPUT_PATH]
+  for (const filePath of watched) {
+    if (!(await fileExists(filePath))) continue
+    watch(filePath, () => {
+      if (timer) clearTimeout(timer)
+      timer = setTimeout(() => {
+        void generateOnce()
+      }, DEBOUNCE_MS)
+    })
+  }
 }
 
 async function generateOnce() {
   try {
-    const raw = await fs.readFile(INPUT_PATH, "utf8")
+    const source = await resolveInput()
+    const raw = await fs.readFile(source.inputPath, "utf8")
     const parsed = JSON.parse(raw)
     const rows = buildRows(parsed)
-    const markdown = buildMarkdown(rows)
+    const markdown = buildMarkdown(rows, source)
 
     let current = ""
     try {
@@ -55,11 +69,11 @@ async function generateOnce() {
     if (current !== markdown) {
       await fs.writeFile(OUTPUT_PATH, markdown, "utf8")
       console.log(
-        `[na-meetings-md] atualizado ${new Date().toISOString()} (${rows.length} ocorrências)`
+        `[na-meetings-md] atualizado ${new Date().toISOString()} (${rows.length} ocorrências, fonte: ${source.mode})`
       )
     } else {
       console.log(
-        `[na-meetings-md] sem mudanças ${new Date().toISOString()} (${rows.length} ocorrências)`
+        `[na-meetings-md] sem mudanças ${new Date().toISOString()} (${rows.length} ocorrências, fonte: ${source.mode})`
       )
     }
   } catch (error) {
@@ -69,8 +83,41 @@ async function generateOnce() {
   }
 }
 
+async function resolveInput() {
+  if (await fileExists(PRIMARY_INPUT_PATH)) {
+    return {
+      inputPath: PRIMARY_INPUT_PATH,
+      mode: "runtime",
+    }
+  }
+
+  if (await fileExists(LEGACY_INPUT_PATH)) {
+    return {
+      inputPath: LEGACY_INPUT_PATH,
+      mode: "legacy",
+    }
+  }
+
+  throw new Error(
+    `Nenhuma fonte encontrada. Esperado: ${PRIMARY_INPUT_PATH} ou ${LEGACY_INPUT_PATH}`
+  )
+}
+
+async function fileExists(filePath) {
+  try {
+    await fs.access(filePath)
+    return true
+  } catch {
+    return false
+  }
+}
+
 function buildRows(payload) {
-  const grupos = Array.isArray(payload?.grupos) ? payload.grupos : []
+  const grupos = Array.isArray(payload)
+    ? payload
+    : Array.isArray(payload?.grupos)
+      ? payload.grupos
+      : []
   const rows = []
 
   for (const grupo of grupos) {
@@ -116,12 +163,13 @@ function buildRows(payload) {
   return rows
 }
 
-function buildMarkdown(rows) {
+function buildMarkdown(rows, source) {
   const generatedAt = new Date().toISOString()
   const lines = [
     "# na_meetings",
     "",
     `Gerado em: ${generatedAt}`,
+    `Fonte: ${source.mode} (${source.inputPath})`,
     `Total de ocorrências: ${rows.length}`,
     "",
     "| Evento | Dia | Início | Fim | Status | ID |",

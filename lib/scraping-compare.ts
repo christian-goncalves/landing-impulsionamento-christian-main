@@ -6,6 +6,7 @@ type MissingReason =
   | "outside_time_window"
   | "parse_discarded"
   | "deduplicated"
+  | "status_mismatch"
   | "not_found_in_source"
 
 interface CompareOptions {
@@ -20,6 +21,7 @@ interface SessionRef {
   day: number
   start: string
   end: string
+  status: "aberta" | "fechada" | "estudo"
   key: string
 }
 
@@ -40,7 +42,7 @@ export interface ComparisonReport {
     discarded: number
     raw_groups_count: number
   }
-  normalized_summary: {
+  normalized_runtime_summary: {
     total_groups: number
     total_sessions: number
   }
@@ -52,13 +54,18 @@ export interface ComparisonReport {
   }
   matches: Array<{
     group_name: string
-    sessions_total: number
+    source_sessions_total: number
+    runtime_sessions_total: number
     sessions_in_window: number
+    status_mismatches: number
     sessions: Array<{
       day: number
       start: string
       end: string
+      source_status: "aberta" | "fechada" | "estudo" | null
+      runtime_status: "aberta" | "fechada" | "estudo" | null
       in_window: boolean
+      status_match: boolean
     }>
   }>
   missing_reasons: MissingReason[]
@@ -66,44 +73,76 @@ export interface ComparisonReport {
 
 export function buildScrapingComparisonReport(
   scrape: ScrapeNormalizedResult,
+  runtimeGroups: Grupo[],
   payload: ApiPayloadV1,
   options: CompareOptions
 ): ComparisonReport {
   const reference = resolveReferenceDate(options)
-  const window = computeWindowFromGroups(scrape.groups, reference)
-  const normalizedSessions = flattenFromGroups(scrape.groups)
+  const sourceSessions = flattenFromGroups(scrape.groups)
+  const runtimeSessions = flattenFromGroups(runtimeGroups)
+  const window = computeWindowFromGroups(runtimeGroups, reference)
 
   const qNorm = normalizeQuery(options.q)
   const sourceMatch = qNorm
-    ? normalizedSessions.filter((s) => normalizeText(s.groupName).includes(qNorm))
-    : normalizedSessions
+    ? sourceSessions.filter((s) => normalizeText(s.groupName).includes(qNorm))
+    : sourceSessions
+  const runtimeMatch = qNorm
+    ? runtimeSessions.filter((s) => normalizeText(s.groupName).includes(qNorm))
+    : runtimeSessions
 
+  const sourceMap = new Map(sourceMatch.map((s) => [s.key, s]))
+  const runtimeMap = new Map(runtimeMatch.map((s) => [s.key, s]))
   const windowKeySet = new Set(window.all.map((s) => s.key))
+  const allKeys = new Set<string>([...sourceMap.keys(), ...runtimeMap.keys()])
 
-  const groupsByName = new Map<string, SessionRef[]>()
-  for (const session of sourceMatch) {
-    const key = session.groupName
-    const arr = groupsByName.get(key) ?? []
-    arr.push(session)
-    groupsByName.set(key, arr)
+  const grouped = new Map<string, Array<ComparisonReport["matches"][number]["sessions"][number]>>()
+  for (const key of allKeys) {
+    const source = sourceMap.get(key)
+    const runtime = runtimeMap.get(key)
+    const groupName = source?.groupName ?? runtime?.groupName
+    if (!groupName) continue
+
+    const row = {
+      day: source?.day ?? runtime?.day ?? 0,
+      start: source?.start ?? runtime?.start ?? "00:00",
+      end: source?.end ?? runtime?.end ?? "00:00",
+      source_status: source?.status ?? null,
+      runtime_status: runtime?.status ?? null,
+      in_window: windowKeySet.has(key),
+      status_match: Boolean(source?.status && runtime?.status && source.status === runtime.status),
+    }
+
+    const arr = grouped.get(groupName) ?? []
+    arr.push(row)
+    grouped.set(groupName, arr)
   }
 
-  const matches = [...groupsByName.entries()].map(([groupName, sessions]) => ({
-    group_name: groupName,
-    sessions_total: sessions.length,
-    sessions_in_window: sessions.filter((s) => windowKeySet.has(s.key)).length,
-    sessions: sessions.map((s) => ({
-      day: s.day,
-      start: s.start,
-      end: s.end,
-      in_window: windowKeySet.has(s.key),
-    })),
-  }))
+  const matches = [...grouped.entries()]
+    .map(([groupName, sessions]) => {
+      const sourceTotal = sessions.filter((s) => s.source_status !== null).length
+      const runtimeTotal = sessions.filter((s) => s.runtime_status !== null).length
+      const inWindow = sessions.filter((s) => s.in_window).length
+      const statusMismatches = sessions.filter(
+        (s) =>
+          s.source_status !== null &&
+          s.runtime_status !== null &&
+          s.source_status !== s.runtime_status
+      ).length
+
+      return {
+        group_name: groupName,
+        source_sessions_total: sourceTotal,
+        runtime_sessions_total: runtimeTotal,
+        sessions_in_window: inWindow,
+        status_mismatches: statusMismatches,
+        sessions: sessions.sort(byDayThenTime),
+      }
+    })
+    .sort((a, b) => a.group_name.localeCompare(b.group_name, "pt-BR"))
 
   const reasons = classifyMissingReasons({
     queryNorm: qNorm,
-    matchesCount: matches.length,
-    sessionsInWindow: matches.reduce((acc, item) => acc + item.sessions_in_window, 0),
+    matches,
     rawCounts: scrape.debug.raw_group_counts,
     dedupCounts: scrape.debug.dedup_group_counts,
     discardedCounts: scrape.debug.discarded_group_counts,
@@ -126,9 +165,9 @@ export function buildScrapingComparisonReport(
       discarded: scrape.metrics.discarded,
       raw_groups_count: Object.keys(scrape.debug.raw_group_counts).length,
     },
-    normalized_summary: {
-      total_groups: scrape.groups.length,
-      total_sessions: normalizedSessions.length,
+    normalized_runtime_summary: {
+      total_groups: runtimeGroups.length,
+      total_sessions: runtimeSessions.length,
     },
     payload_window_summary: {
       em_andamento: payload.emAndamento.length,
@@ -144,20 +183,28 @@ export function buildScrapingComparisonReport(
 
 function classifyMissingReasons(input: {
   queryNorm: string | null
-  matchesCount: number
-  sessionsInWindow: number
+  matches: ComparisonReport["matches"]
   rawCounts: Record<string, number>
   dedupCounts: Record<string, number>
   discardedCounts: Record<string, number>
 }): MissingReason[] {
+  if (!input.queryNorm) {
+    return []
+  }
+
   const reasons = new Set<MissingReason>()
+  const totalSource = input.matches.reduce((acc, m) => acc + m.source_sessions_total, 0)
+  const totalWindow = input.matches.reduce((acc, m) => acc + m.sessions_in_window, 0)
+  const totalMismatches = input.matches.reduce((acc, m) => acc + m.status_mismatches, 0)
 
-  if (!input.queryNorm) return []
-
-  if (input.matchesCount === 0) {
+  if (totalSource === 0) {
     reasons.add("not_found_in_source")
-  } else if (input.sessionsInWindow === 0) {
+  } else if (totalWindow === 0) {
     reasons.add("outside_time_window")
+  }
+
+  if (totalMismatches > 0) {
+    reasons.add("status_mismatch")
   }
 
   const rawCount = sumByNormalizedName(input.rawCounts, input.queryNorm)
@@ -190,6 +237,7 @@ function flattenFromGroups(groups: Grupo[]): SessionRef[] {
           day,
           start: sessao.horario_inicio,
           end: sessao.horario_fim,
+          status: sessao.tipo_acesso,
           key: buildSessionKey(group.nome, day, sessao.horario_inicio, sessao.horario_fim),
         })
       }
@@ -198,19 +246,11 @@ function flattenFromGroups(groups: Grupo[]): SessionRef[] {
   return out
 }
 
-function computeWindowFromGroups(groups: Grupo[], reference: Date): {
-  emAndamento: SessionRef[]
-  iniciandoEmBreve: SessionRef[]
-  proximas: SessionRef[]
-  all: SessionRef[]
-} {
+function computeWindowFromGroups(groups: Grupo[], reference: Date): { all: SessionRef[] } {
   const day = reference.getDay()
   const yesterday = day === 0 ? 6 : day - 1
   const nowMin = reference.getHours() * 60 + reference.getMinutes()
-
-  const emAndamento: SessionRef[] = []
-  const iniciandoEmBreve: SessionRef[] = []
-  const proximas: SessionRef[] = []
+  const all: SessionRef[] = []
 
   for (const group of groups) {
     for (const sessao of group.sessoes) {
@@ -236,30 +276,24 @@ function computeWindowFromGroups(groups: Grupo[], reference: Date): {
         }
       }
 
-      const ref: SessionRef = {
-        groupName: group.nome,
-        day,
-        start: sessao.horario_inicio,
-        end: sessao.horario_fim,
-        key: buildSessionKey(group.nome, day, sessao.horario_inicio, sessao.horario_fim),
-      }
-
-      if (ativo) {
-        emAndamento.push(ref)
-      } else if (dias.includes(day) && minutosParaInicio > 0 && minutosParaInicio <= 60) {
-        iniciandoEmBreve.push(ref)
-      } else if (dias.includes(day) && minutosParaInicio > 60 && minutosParaInicio <= 480) {
-        proximas.push(ref)
+      if (
+        ativo ||
+        (dias.includes(day) && minutosParaInicio > 0 && minutosParaInicio <= 60) ||
+        (dias.includes(day) && minutosParaInicio > 60 && minutosParaInicio <= 480)
+      ) {
+        all.push({
+          groupName: group.nome,
+          day,
+          start: sessao.horario_inicio,
+          end: sessao.horario_fim,
+          status: sessao.tipo_acesso,
+          key: buildSessionKey(group.nome, day, sessao.horario_inicio, sessao.horario_fim),
+        })
       }
     }
   }
 
-  return {
-    emAndamento,
-    iniciandoEmBreve,
-    proximas,
-    all: [...emAndamento, ...iniciandoEmBreve, ...proximas],
-  }
+  return { all }
 }
 
 function resolveReferenceDate(options: CompareOptions): Date {
@@ -307,3 +341,11 @@ function normalizeText(value: string): string {
     .trim()
 }
 
+function byDayThenTime(
+  a: ComparisonReport["matches"][number]["sessions"][number],
+  b: ComparisonReport["matches"][number]["sessions"][number]
+): number {
+  if (a.day !== b.day) return a.day - b.day
+  if (a.start !== b.start) return a.start.localeCompare(b.start, "pt-BR")
+  return a.end.localeCompare(b.end, "pt-BR")
+}

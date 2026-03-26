@@ -1,7 +1,12 @@
 import { NextResponse } from "next/server"
 import { scrapeNaVirtualMeetings } from "@/lib/na-virtual-scraper"
 import { buildPayloadV1 } from "@/lib/payload-v1"
-import { readCurrentPayload, readLastSnapshot } from "@/lib/runtime-store"
+import {
+  readCurrentGroups,
+  readCurrentPayload,
+  readLastGroupsSnapshot,
+  readLastSnapshot,
+} from "@/lib/runtime-store"
 import { buildScrapingComparisonReport } from "@/lib/scraping-compare"
 
 export async function GET(request: Request) {
@@ -13,17 +18,20 @@ export async function GET(request: Request) {
 
   try {
     const scrape = await scrapeNaVirtualMeetings()
-    const [currentPayload, snapshotPayload] = await Promise.all([
+    const [currentPayload, snapshotPayload, currentGroups, snapshotGroups] = await Promise.all([
       readCurrentPayload(),
       readLastSnapshot(),
+      readCurrentGroups(),
+      readLastGroupsSnapshot(),
     ])
 
     const payload =
       currentPayload ??
       snapshotPayload ??
       buildPayloadV1("ok", scrape.meetingsResult, new Date().toISOString())
+    const runtimeGroups = currentGroups ?? snapshotGroups ?? scrape.groups
 
-    const report = buildScrapingComparisonReport(scrape, payload, {
+    const report = buildScrapingComparisonReport(scrape, runtimeGroups, payload, {
       q,
       day,
       hour,
@@ -36,6 +44,11 @@ export async function GET(request: Request) {
         ? "current_payload"
         : snapshotPayload
           ? "last_snapshot"
+          : "fresh_from_scrape",
+      operational_runtime_source: currentGroups
+        ? "current_groups"
+        : snapshotGroups
+          ? "last_groups_snapshot"
           : "fresh_from_scrape",
       report,
     })
@@ -75,4 +88,3 @@ function sanitizeTimezone(value: string | null): string {
   if (!value) return "America/Sao_Paulo"
   return value.trim() || "America/Sao_Paulo"
 }
-

@@ -71,3 +71,26 @@ Validação operacional da Fase 05 no contexto atual do projeto `landing-impulsi
 - Integração do frontend com API interna concluída sem mudança de stack.
 - Build/lint aprovados (warnings não bloqueantes remanescentes fora do escopo desta entrega).
 - Fluxos `ok`, `fallback`, `stale` e `recover` validados em runtime.
+
+## Rodada extra - correção cirúrgica de status (Fênix/Largo)
+
+### 1) Fonte operacional e legado
+- Fonte única operacional definida: data/runtime/current_groups.json.
+- lib/meetings.ts atualizado para fallback legado apenas por flag MEETINGS_ENABLE_LEGACY_JSON_FALLBACK=true.
+- scripts/generate-na-meetings-md.mjs atualizado para priorizar runtime (fallback legado temporário).
+
+### 2) Diagnóstico expandido
+- GET /api/diagnostics/scraping-compare agora compara source_raw x 
+ormalized_runtime x payload_window.
+- Novo motivo explícito: status_mismatch.
+
+### 3) Evidência dirigida
+- data/na_meetings.md regenerado com fonte untime.
+- Fênix: Seg-Sáb echada, Dom berta.
+- Largo do Machado: Dom 10:00 berta; demais ocorrências sem marcador de aberta = echada.
+
+### 4) Qualidade técnica
+- 
+pm run lint: sucesso (warnings não bloqueantes preexistentes).
+- 
+pm run build: sucesso.

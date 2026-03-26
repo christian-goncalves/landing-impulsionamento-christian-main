@@ -112,11 +112,15 @@ export async function scrapeNaVirtualMeetings(
           const detailsBase = `${entry.detailsText} ${entry.meetingUrl ?? ""}`.trim()
           const formatos = extractFormatos(detailsBase)
           const isOpen = containsAny(detailsBase, ["aberta", "aberto", "visitantes"]) ? 1 : 0
-          const isStudy =
-            containsAny(detailsBase, ["estudo", "literatura", "guia de passos", "texto basico", "texto básico"]) ||
-            formatos.some((f) => normalizeAscii(f).includes("estudo"))
-              ? 1
-              : 0
+          const isStudy = containsAny(detailsBase, [
+            "estudo",
+            "literatura",
+            "guia de passos",
+            "texto basico",
+            "texto básico",
+          ])
+            ? 1
+            : 0
           const tipoAcesso = resolveTipoAcesso(isOpen, isStudy)
           const appCode = extractPlatform(detailsBase, entry.meetingUrl, detailsCellHtml)
           const app = PLATFORM_LABEL[appCode] ?? "Reunião Online"

@@ -52,6 +52,16 @@ export interface MeetingsFetchResult {
   meta: MeetingsFetchMeta
 }
 
+const EMPTY_MEETINGS_RESULT: MeetingsResult = {
+  emAndamento: [],
+  iniciandoEmBreve: [],
+  proximas: [],
+}
+
+function isLegacyJsonFallbackEnabled(): boolean {
+  return process.env.MEETINGS_ENABLE_LEGACY_JSON_FALLBACK === "true"
+}
+
 // Legacy compat
 export type QueryResult = { mode: "active" | "upcoming"; sessions: SessaoAtiva[] }
 
@@ -138,6 +148,10 @@ export async function getMeetingsFromApi(
 }
 
 export function getMeetings(): MeetingsResult {
+  if (!isLegacyJsonFallbackEnabled()) {
+    return EMPTY_MEETINGS_RESULT
+  }
+
   return getMeetingsFromGroups((meetingsData as { grupos: Grupo[] }).grupos)
 }
 
