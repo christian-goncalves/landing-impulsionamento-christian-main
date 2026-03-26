@@ -1,0 +1,154 @@
+#!/usr/bin/env node
+
+import { promises as fs } from "node:fs"
+import { watch } from "node:fs"
+import path from "node:path"
+
+const INPUT_PATH = path.resolve(process.cwd(), "data", "na_meetings.json")
+const OUTPUT_PATH = path.resolve(process.cwd(), "data", "na_meetings.md")
+const WATCH_MODE = process.argv.includes("--watch")
+const DEBOUNCE_MS = 400
+
+const DAY_LABELS = [
+  "Domingo",
+  "Segunda-feira",
+  "Terça-feira",
+  "Quarta-feira",
+  "Quinta-feira",
+  "Sexta-feira",
+  "Sábado",
+]
+
+async function main() {
+  await generateOnce()
+
+  if (!WATCH_MODE) return
+
+  console.log(`[na-meetings-md] watch ativo: ${INPUT_PATH}`)
+  let timer = null
+  watch(INPUT_PATH, () => {
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      void generateOnce()
+    }, DEBOUNCE_MS)
+  })
+}
+
+async function generateOnce() {
+  try {
+    const raw = await fs.readFile(INPUT_PATH, "utf8")
+    const parsed = JSON.parse(raw)
+    const rows = buildRows(parsed)
+    const markdown = buildMarkdown(rows)
+
+    let current = ""
+    try {
+      current = await fs.readFile(OUTPUT_PATH, "utf8")
+    } catch {
+      current = ""
+    }
+
+    if (current !== markdown) {
+      await fs.writeFile(OUTPUT_PATH, markdown, "utf8")
+      console.log(
+        `[na-meetings-md] atualizado ${new Date().toISOString()} (${rows.length} ocorrências)`
+      )
+    } else {
+      console.log(
+        `[na-meetings-md] sem mudanças ${new Date().toISOString()} (${rows.length} ocorrências)`
+      )
+    }
+  } catch (error) {
+    const message =
+      error instanceof Error ? error.message : "Erro desconhecido ao gerar na_meetings.md"
+    console.error(`[na-meetings-md] erro: ${message}`)
+  }
+}
+
+function buildRows(payload) {
+  const grupos = Array.isArray(payload?.grupos) ? payload.grupos : []
+  const rows = []
+
+  for (const grupo of grupos) {
+    const nomeBruto = String(grupo?.nome ?? "").trim()
+    if (!nomeBruto) continue
+
+    const evento = normalizeEvento(nomeBruto)
+    const sessoes = Array.isArray(grupo?.sessoes) ? grupo.sessoes : []
+
+    for (const sessao of sessoes) {
+      const dias = Array.isArray(sessao?.dias_semana) ? sessao.dias_semana : []
+      const inicio = String(sessao?.horario_inicio ?? "").trim()
+      const fim = String(sessao?.horario_fim ?? "").trim()
+      const status = normalizeStatus(sessao?.tipo_acesso)
+      const id = normalizeId(sessao?.zoom_id)
+
+      for (const diaIndex of dias) {
+        if (!Number.isInteger(diaIndex) || diaIndex < 0 || diaIndex > 6) continue
+        rows.push({
+          evento,
+          diaIndex,
+          dia: DAY_LABELS[diaIndex],
+          inicio,
+          fim,
+          status,
+          id,
+        })
+      }
+    }
+  }
+
+  rows.sort((a, b) => {
+    if (a.diaIndex !== b.diaIndex) return a.diaIndex - b.diaIndex
+    if (a.inicio !== b.inicio) return a.inicio.localeCompare(b.inicio, "pt-BR")
+    return a.evento.localeCompare(b.evento, "pt-BR")
+  })
+
+  return rows
+}
+
+function buildMarkdown(rows) {
+  const generatedAt = new Date().toISOString()
+  const lines = [
+    "# na_meetings",
+    "",
+    `Gerado em: ${generatedAt}`,
+    `Total de ocorrências: ${rows.length}`,
+    "",
+    "| Evento | Dia | Início | Fim | Status | ID |",
+    "| --- | --- | --- | --- | --- | --- |",
+  ]
+
+  for (const row of rows) {
+    lines.push(
+      `| ${esc(row.evento)} | ${esc(row.dia)} | ${esc(row.inicio)} | ${esc(row.fim)} | ${esc(
+        row.status
+      )} | ${esc(row.id)} |`
+    )
+  }
+
+  lines.push("")
+  return lines.join("\n")
+}
+
+function normalizeEvento(value) {
+  return value.replace(/^grupo\s+/i, "").trim()
+}
+
+function normalizeStatus(value) {
+  const raw = String(value ?? "").trim().toLowerCase()
+  if (raw === "aberta" || raw === "estudo" || raw === "fechada") return raw
+  return "fechada"
+}
+
+function normalizeId(value) {
+  const id = String(value ?? "").trim()
+  return id.length > 0 && id.toLowerCase() !== "null" ? id : "-"
+}
+
+function esc(value) {
+  return String(value).replace(/\|/g, "\\|")
+}
+
+void main()
+

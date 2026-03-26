@@ -73,3 +73,12 @@
 - **Decisão**: Go-live condicionado ao `GO_NO_GO_CHECKLIST` 100% aprovado com evidências de contrato, fallback e regressão de frontend.
 - **Impacto**: Reduz risco operacional e formaliza critério objetivo de liberação.
 - **Status**: approved
+
+
+## DECISION-009
+- **ID**: DECISION-009
+- **Data**: 2026-03-26
+- **Contexto**: Inconsistência de classificação de reuniões no frontend ao inferir tipo por texto em `formatos`.
+- **Decisão**: A landing passa a executar scraping interno e normalização canônica de acesso: `is_study=1 -> estudo`, senão `is_open=1 -> aberta`, senão `fechada`.
+- **Impacto**: `sessao.tipo_acesso` torna-se fonte única de verdade para a UI; elimina dependência de CSV manual como fonte operacional.
+- **Status**: approved

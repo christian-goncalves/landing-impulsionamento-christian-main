@@ -30,7 +30,7 @@ type SessaoAtiva = {
     zoom_id: string | null
     senha: string | null
     formatos: string[]
-    tipo_acesso: "aberta" | "fechada" | string
+    tipo_acesso: "aberta" | "fechada" | "estudo"
     timezone: string
     notas: string | null
   }
@@ -112,3 +112,4 @@ type SessaoAtiva = {
   "proximas": []
 }
 ```
+

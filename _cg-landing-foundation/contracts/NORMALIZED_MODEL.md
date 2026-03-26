@@ -19,7 +19,7 @@ type MeetingNormalized = {
   meetingPassword: string | null
   meetingUrl: string | null
   formatLabels: string[]
-  accessType: string
+  accessType: "aberta" | "fechada" | "estudo"
   notes: string | null
   sourceStatus: "ok" | "fallback" | "stale"
   syncedAt: string | null // ISO-8601
@@ -33,3 +33,4 @@ type MeetingNormalized = {
 
 ## Saída
 O adaptador `MeetingNormalized -> ApiPayloadV1` é responsável por prioridade, labels e janelas de exibição.
+

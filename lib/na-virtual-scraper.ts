@@ -55,6 +55,11 @@ export interface ScrapeNormalizedResult {
   groups: Grupo[]
   meetingsResult: MeetingsResult
   metrics: ScrapeMetrics
+  debug: {
+    raw_group_counts: Record<string, number>
+    dedup_group_counts: Record<string, number>
+    discarded_group_counts: Record<string, number>
+  }
   generatedAt: string
 }
 
@@ -66,6 +71,7 @@ export async function scrapeNaVirtualMeetings(
   const tableBlocks = extractByRegex(html, /<table\b[^>]*id=["']copy[^"']*["'][^>]*>[\s\S]*?<\/table>/gi)
 
   const rawEntries: RawMeetingEntry[] = []
+  const discardedByGroup: Record<string, number> = {}
   let parseErrors = 0
   let discarded = 0
 
@@ -99,6 +105,7 @@ export async function scrapeNaVirtualMeetings(
         for (const entry of entries) {
           if (!entry.startAt) {
             discarded += 1
+            discardedByGroup[groupName] = (discardedByGroup[groupName] ?? 0) + 1
             continue
           }
 
@@ -141,6 +148,8 @@ export async function scrapeNaVirtualMeetings(
   const deduped = deduplicateRows(rawEntries)
   const groups = toGroupedModel(deduped)
   const meetingsResult = getMeetingsFromGroups(groups)
+  const rawGroupCounts = countByGroup(rawEntries)
+  const dedupGroupCounts = countByGroup(deduped)
 
   return {
     sourceUrl: SOURCE_URL,
@@ -153,6 +162,11 @@ export async function scrapeNaVirtualMeetings(
       parse_errors: parseErrors,
       deduplicated: Math.max(0, rawEntries.length - deduped.length),
       discarded,
+    },
+    debug: {
+      raw_group_counts: rawGroupCounts,
+      dedup_group_counts: dedupGroupCounts,
+      discarded_group_counts: discardedByGroup,
     },
   }
 }
@@ -415,6 +429,14 @@ function deduplicateRows(entries: RawMeetingEntry[]): RawMeetingEntry[] {
   return [...map.values()]
 }
 
+function countByGroup(entries: RawMeetingEntry[]): Record<string, number> {
+  const counts: Record<string, number> = {}
+  for (const entry of entries) {
+    counts[entry.groupName] = (counts[entry.groupName] ?? 0) + 1
+  }
+  return counts
+}
+
 function toGroupedModel(entries: RawMeetingEntry[]): Grupo[] {
   const groupMap = new Map<string, Grupo>()
   const sessionMap = new Map<string, Sessao>()
@@ -495,7 +517,9 @@ function extractTableCells(rowHtml: string): string[] {
 }
 
 function extractByRegex(text: string, regex: RegExp): string[] {
-  return [...text.matchAll(regex)].map((m) => m[0])
+  const flags = regex.flags.includes("g") ? regex.flags : `${regex.flags}g`
+  const safeRegex = new RegExp(regex.source, flags)
+  return [...text.matchAll(safeRegex)].map((m) => m[0])
 }
 
 function stripHtml(value: string): string {

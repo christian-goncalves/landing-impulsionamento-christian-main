@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import { buildPayloadV1 } from "@/lib/payload-v1"
 import {
   writeCurrentPayload,
+  writeCurrentGroups,
+  writeLastGroupsSnapshot,
   writeQualityReport,
   writeLastSnapshot,
   writeSyncState,
@@ -32,6 +34,8 @@ export async function POST() {
 
     await writeCurrentPayload(payload)
     await writeLastSnapshot(payload)
+    await writeCurrentGroups(scrapeResult.groups)
+    await writeLastGroupsSnapshot(scrapeResult.groups)
     await writeSyncState({
       sourceDown: false,
       failMode: null,

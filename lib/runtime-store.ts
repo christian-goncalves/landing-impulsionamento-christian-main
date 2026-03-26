@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs"
 import path from "node:path"
 import type { ApiPayloadV1, SourceStatus } from "@/lib/payload-v1"
+import type { Grupo } from "@/lib/meetings"
 
 interface SyncState {
   sourceDown: boolean
@@ -11,6 +12,8 @@ interface SyncState {
 const runtimeDir = path.join(process.cwd(), "data", "runtime")
 const currentPayloadFile = path.join(runtimeDir, "current_payload_v1.json")
 const lastSnapshotFile = path.join(runtimeDir, "last_valid_snapshot_v1.json")
+const currentGroupsFile = path.join(runtimeDir, "current_groups.json")
+const lastGroupsSnapshotFile = path.join(runtimeDir, "last_groups_snapshot.json")
 const syncStateFile = path.join(runtimeDir, "sync_state.json")
 const qualityDir = path.join(runtimeDir, "quality")
 
@@ -52,6 +55,22 @@ export async function readLastSnapshot(): Promise<ApiPayloadV1 | null> {
 
 export async function writeLastSnapshot(payload: ApiPayloadV1): Promise<void> {
   await writeJsonFile(lastSnapshotFile, payload)
+}
+
+export async function readCurrentGroups(): Promise<Grupo[] | null> {
+  return readJsonFile<Grupo[]>(currentGroupsFile)
+}
+
+export async function writeCurrentGroups(groups: Grupo[]): Promise<void> {
+  await writeJsonFile(currentGroupsFile, groups)
+}
+
+export async function readLastGroupsSnapshot(): Promise<Grupo[] | null> {
+  return readJsonFile<Grupo[]>(lastGroupsSnapshotFile)
+}
+
+export async function writeLastGroupsSnapshot(groups: Grupo[]): Promise<void> {
+  await writeJsonFile(lastGroupsSnapshotFile, groups)
 }
 
 export async function readSyncState(): Promise<SyncState> {
