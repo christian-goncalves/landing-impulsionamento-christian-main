@@ -1,0 +1,19 @@
+﻿{
+    "sync_ok":  true,
+    "after_sync":  {
+                       "sourceStatus":  "ok",
+                       "lastSyncAt":  "2026-03-26T19:35:17.649Z"
+                   },
+    "after_fallback":  {
+                           "sourceStatus":  "fallback",
+                           "lastSyncAt":  "2026-03-26T19:35:17.649Z"
+                       },
+    "after_stale":  {
+                        "sourceStatus":  "stale",
+                        "lastSyncAt":  "2026-03-26T19:35:17.649Z"
+                    },
+    "after_recover":  {
+                          "sourceStatus":  "ok",
+                          "lastSyncAt":  "2026-03-26T19:35:17.649Z"
+                      }
+}

@@ -8,3 +8,8 @@ node_modules/
 .next/
 .env*.local
 .DS_Store
+# Local runtime/test artifacts
+data/runtime/
+tmp_dev_out.log
+tmp_dev_err.log
+

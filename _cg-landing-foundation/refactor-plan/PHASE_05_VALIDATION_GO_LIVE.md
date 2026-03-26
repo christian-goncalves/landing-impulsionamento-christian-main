@@ -4,24 +4,21 @@
 Concluir validação técnica e operacional para liberação da refatoração com risco controlado.
 
 ## Estado da fase
-- Status: **IN_PROGRESS**
+- Status: **DONE**
 - Data de referência: 2026-03-26
 
 ## Execução realizada
 - Build de produção: sucesso.
 - Lint: sucesso (sem erros).
-- Sanidade de dataset local: sucesso.
-- Presença das seções principais de frontend: sucesso.
+- Sync manual: validado em runtime.
+- Fallback e stale: simulados e validados em runtime.
+- Recover: validado com retorno para `sourceStatus=ok`.
 
 ## Evidências
 - `checklists/VALIDATION_EVIDENCE_2026-03-26.md`
-
-## Pendências para fechamento
-1. Validar runbook de sync em execução manual (fim-a-fim).
-2. Validar fallback/stale em runtime com fonte contratual ativa.
-3. Fechar `GO_NO_GO_CHECKLIST` em 100%.
+- `checklists/RUNTIME_SYNC_FALLBACK_EVIDENCE_2026-03-26.json`
 
 ## Critérios de saída
 - `checklists/GO_NO_GO_CHECKLIST.md` 100% aprovado.
 - Registro de validação final anexado.
-- Status de rollout definido (go/no-go).
+- Status de rollout definido: **GO**.
