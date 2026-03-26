@@ -97,8 +97,7 @@ export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps)
     .filter(f => f !== "Reunião Virtual" && !f.toLowerCase().startsWith("estudo") && f !== "Estudos")
     .join(", ")
 
-  // Botão Entrar reutilizável com tracking
-  function BotaoEntrar({ className, label }: { className: string; label: string }) {
+  function renderBotaoEntrar(className: string, label: string) {
     if (!sessao.zoomLink) return (
       <span className="flex-1 text-center py-2.5 rounded-lg text-xs font-bold bg-muted text-muted-foreground">
         {sessao.sessao.app}
@@ -214,10 +213,10 @@ export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps)
       </div>
 
       <div className="flex items-center gap-2 mt-auto pt-1">
-        <BotaoEntrar
-          className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg text-xs font-bold transition-all hover:-translate-y-0.5 ${style.btn}`}
-          label={style.label}
-        />
+        {renderBotaoEntrar(
+          `flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg text-xs font-bold transition-all hover:-translate-y-0.5 ${style.btn}`,
+          style.label
+        )}
         <ShareButton
           title={sessao.grupo.nome}
           text={`${sessao.sessao.horario_inicio} – ${sessao.sessao.horario_fim} | ${sessao.sessao.app}${sessao.sessao.zoom_id ? ` ID: ${sessao.sessao.zoom_id}` : ""}${sessao.sessao.senha ? ` Senha: ${sessao.sessao.senha}` : ""}`}

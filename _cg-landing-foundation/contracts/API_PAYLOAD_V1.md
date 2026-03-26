@@ -73,13 +73,40 @@ type SessaoAtiva = {
 - Campos novos em V1 devem ser opcionais e backward-compatible.
 - Breaking change exige nova versão (`v2`) + registro no `DECISION_LOG.md`.
 
-## Exemplo mínimo válido
+## Exemplos válidos
+### Estado `ok`
 ```json
 {
   "version": "v1",
   "serverTime": "2026-03-26T15:20:00-03:00",
   "lastSyncAt": "2026-03-26T15:10:00-03:00",
   "sourceStatus": "ok",
+  "emAndamento": [],
+  "iniciandoEmBreve": [],
+  "proximas": []
+}
+```
+
+### Estado `fallback`
+```json
+{
+  "version": "v1",
+  "serverTime": "2026-03-26T15:30:00-03:00",
+  "lastSyncAt": "2026-03-26T14:50:00-03:00",
+  "sourceStatus": "fallback",
+  "emAndamento": [],
+  "iniciandoEmBreve": [],
+  "proximas": []
+}
+```
+
+### Estado `stale`
+```json
+{
+  "version": "v1",
+  "serverTime": "2026-03-26T18:30:00-03:00",
+  "lastSyncAt": "2026-03-26T12:00:00-03:00",
+  "sourceStatus": "stale",
   "emAndamento": [],
   "iniciandoEmBreve": [],
   "proximas": []
