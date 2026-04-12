@@ -91,3 +91,11 @@
 - **Impacto**: 
 a_meetings.md passa a ser gerado do runtime por padrão; classificação e consumo ficam alinhados ao padrão do NA_virtual_clone.
 - **Status**: approved
+
+## DECISION-011
+- **ID**: DECISION-011
+- **Data**: 2026-04-12
+- **Contexto**: Incidente de domingo vazio por divergência de codificação de dia da semana em `dias_semana`.
+- **Decisão**: Normalizar no filtro operacional (`getMeetingsFromGroups`) para aceitar `dias_semana` em `0..6` e `1..7`, convergindo internamente para padrão canônico `1..7` antes da comparação temporal.
+- **Impacto**: Corrige elegibilidade de domingo sem alterar contrato `ApiPayloadV1` nem shape de `GET /api/reunioes-virtuais`; mantém comportamento de segunda a sábado e sessões que cruzam meia-noite.
+- **Status**: approved
