@@ -29,3 +29,4 @@
 ## Evidência
 - `checklists/VALIDATION_EVIDENCE_2026-03-26.md`
 - `checklists/RUNTIME_SYNC_FALLBACK_EVIDENCE_2026-03-26.json`
+- `checklists/CHECKLIST_GTM_GA4_FUNIL_2026-04-15.md`
