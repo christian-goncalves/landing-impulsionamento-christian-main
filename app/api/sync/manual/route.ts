@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 import { buildPayloadV1 } from "@/lib/payload-v1"
 import {
   writeCurrentPayload,
@@ -11,7 +11,43 @@ import {
 import { buildMetrics, createReport } from "@/lib/scraping-quality"
 import { scrapeNaVirtualMeetings } from "@/lib/na-virtual-scraper"
 
-export async function POST() {
+function extractBearerToken(headerValue: string | null): string | null {
+  if (!headerValue) return null
+  const [scheme, token] = headerValue.split(" ")
+  if (!scheme || !token) return null
+  if (scheme.toLowerCase() !== "bearer") return null
+  return token.trim() || null
+}
+
+function getExpectedSyncSecret(): string | null {
+  const secret = process.env.SYNC_CRON_SECRET ?? process.env.CRON_SECRET ?? null
+  return secret && secret.trim().length > 0 ? secret.trim() : null
+}
+
+export async function POST(request: NextRequest) {
+  const expectedSecret = getExpectedSyncSecret()
+
+  if (!expectedSecret) {
+    return NextResponse.json(
+      {
+        ok: false,
+        message: "SYNC_CRON_SECRET nao configurado no ambiente.",
+      },
+      { status: 500 }
+    )
+  }
+
+  const token = extractBearerToken(request.headers.get("authorization"))
+  if (!token || token !== expectedSecret) {
+    return NextResponse.json(
+      {
+        ok: false,
+        message: "Nao autorizado.",
+      },
+      { status: 401 }
+    )
+  }
+
   const nowIso = new Date().toISOString()
 
   try {
