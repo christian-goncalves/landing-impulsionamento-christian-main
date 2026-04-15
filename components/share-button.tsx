@@ -2,6 +2,7 @@
 
 import { Share2 } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
+import { trackShareClick } from "@/lib/pixel"
 
 interface ShareButtonProps {
   title: string
@@ -37,6 +38,7 @@ export function ShareButton({ title, text, url }: ShareButtonProps) {
       href: "#",
       color: "bg-muted text-foreground hover:bg-border",
       onClick: () => {
+        trackShareClick("meeting-card", "copy_link")
         navigator.clipboard.writeText(`${title}\n${text}\n${shareUrl}`)
         setOpen(false)
       },
@@ -61,6 +63,9 @@ export function ShareButton({ title, text, url }: ShareButtonProps) {
               target={link.href !== "#" ? "_blank" : undefined}
               rel="noopener noreferrer"
               onClick={(e) => {
+                if (link.label === "WhatsApp") {
+                  trackShareClick("meeting-card", "whatsapp")
+                }
                 if (link.onClick) {
                   e.preventDefault()
                   link.onClick()

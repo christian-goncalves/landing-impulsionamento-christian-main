@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import Script from 'next/script'
 import { Analytics } from "@vercel/analytics/next"
+import { AnalyticsEvents } from "@/components/analytics-events"
 
 import './globals.css'
 
@@ -27,6 +28,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${_inter.variable} ${_spaceGrotesk.variable}`}>
       <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
 
 <meta name="facebook-domain-verification" content="m5utsjda64hyib31ywxbegu71fx26s" />
 
@@ -39,7 +44,7 @@ export default function RootLayout({
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P2FG5NBH');`,
+})(window,document,'script','dataLayer','GTM-5XLZH6Q2');`,
           }}
         />
 
@@ -67,7 +72,7 @@ fbq('track','PageView');`,
         {/* ── GTM noscript fallback (logo após <body>) ── */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-P2FG5NBH"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5XLZH6Q2"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
@@ -87,6 +92,7 @@ fbq('track','PageView');`,
         </noscript>
 
         {children}
+        <AnalyticsEvents />
         <Analytics />
 
       </body>

@@ -76,25 +76,19 @@ function StatusIndicator({ meta }: { meta: MeetingsFetchMeta }) {
 // ── Legenda de tipos — componente único reutilizável ───────────────────────
 function LegendaTipos() {
   return (
-    <div className="flex flex-wrap items-center gap-3 mb-4 text-[11px] text-muted-foreground">
-      <span className="font-semibold">Tipos:</span>
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-100 text-green-700 border border-green-200 font-bold">
-        <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/>
-        </svg>
-        Aberta — público em geral
+    <div className="mb-4 flex flex-wrap items-center gap-2">
+      <span className="text-xs font-medium text-[hsl(var(--muted-foreground))]">Tipos:</span>
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-100 text-green-700 border border-green-200 text-[11px] font-bold">
+        <i className="fa-solid fa-user-group text-[0.62rem]" aria-hidden="true"></i>
+        <span>Aberta - público em geral</span>
       </span>
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200 font-bold">
-        <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-        </svg>
-        Fechada — quem tem ou acha que tem problemas com drogas
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200 text-[11px] font-bold">
+        <i className="fa-solid fa-lock text-[0.62rem]" aria-hidden="true"></i>
+        <span>Fechada - que tem ou acha que tem problema com drogas</span>
       </span>
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 border border-purple-200 font-bold">
-        <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-        </svg>
-        Estudos — estudo de literatura
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 border border-purple-200 text-[11px] font-bold">
+        <i className="fa-solid fa-book-open text-[0.62rem]" aria-hidden="true"></i>
+        <span>Estudo - estudo de literatura</span>
       </span>
     </div>
   )
@@ -120,7 +114,7 @@ export function EmAndamento({
         <h2 className="text-xl md:text-2xl font-bold text-foreground font-display">
           Reuniões em Andamento
         </h2>
-        <span className="ml-auto text-xs font-semibold bg-red-100 text-red-600 px-2.5 py-1 rounded-full">
+        <span className="ml-auto text-xs font-semibold bg-blue-100 text-[hsl(var(--na-blue))] px-2.5 py-1 rounded-full">
           {emAndamento.length} em andamento
         </span>
       </div>
@@ -151,7 +145,7 @@ export function IniciandoEmBreve({
           Iniciando em Breve
         </h2>
         <span className="ml-auto text-xs font-semibold bg-orange-100 text-orange-600 px-2.5 py-1 rounded-full">
-          próximos 60 min
+          {iniciandoEmBreve.length} próximos 60 min
         </span>
       </div>
 

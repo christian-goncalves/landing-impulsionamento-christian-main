@@ -2,7 +2,12 @@
 
 import { Phone, ExternalLink, Video, MapPin } from "lucide-react"
 import Image from "next/image"
-import { trackCallClick, trackPresenciaisClick, trackSiteNAClick } from "@/lib/pixel"
+import {
+  trackCallClick,
+  trackCtaClick,
+  trackPresenciaisClick,
+  trackSiteNAClick,
+} from "@/lib/pixel"
 
 export function SiteFooter() {
   return (
@@ -24,6 +29,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
           <a
             href="#andamento"
+            onClick={() => trackCtaClick("footer", "reunioes_online")}
             className="flex items-center justify-center gap-2 px-4 py-4 rounded-xl bg-[hsl(var(--na-blue))] text-white font-bold text-sm hover:bg-[hsl(var(--na-blue))]/80 transition-colors"
           >
             <Video className="w-5 h-5" />Reuniões Online

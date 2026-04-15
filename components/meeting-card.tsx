@@ -91,9 +91,6 @@ function TerminaEm({ minutos }: { minutos: number }) {
 export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps) {
   const style = priorityStyles[sessao.prioridade]
   const tipo = getTipo(sessao.sessao)
-  const formatos = sessao.sessao.formatos
-    .filter(f => f !== "Reunião Virtual" && !f.toLowerCase().startsWith("estudo") && f !== "Estudos")
-    .join(", ")
 
   function renderBotaoEntrar(className: string, label: string) {
     if (!sessao.zoomLink) return (
@@ -106,7 +103,7 @@ export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps)
         href={sessao.zoomLink}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackZoomClick(sessao.grupo.nome, tipo, sessao.sessao.horario_inicio)}
+        onClick={() => trackZoomClick(sessao.grupo.nome, tipo, sessao.sessao.horario_inicio, `meeting-card-${variant}`)}
         className={className}
       >
         <Video className="w-3.5 h-3.5" />
@@ -127,7 +124,6 @@ export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps)
           <div className="font-semibold text-sm text-foreground truncate mb-1">{sessao.grupo.nome}</div>
           <div className="flex items-center gap-1.5 flex-wrap">
             <TipoBadge sessao={sessao.sessao} />
-            {formatos && <span className="text-xs text-muted-foreground truncate">{formatos}</span>}
           </div>
         </div>
         <div className="flex items-center gap-1.5 flex-shrink-0">
@@ -136,7 +132,7 @@ export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps)
               href={sessao.zoomLink}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackZoomClick(sessao.grupo.nome, tipo, sessao.sessao.horario_inicio)}
+              onClick={() => trackZoomClick(sessao.grupo.nome, tipo, sessao.sessao.horario_inicio, `meeting-card-${variant}`)}
               className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold bg-[hsl(var(--na-blue))] text-white hover:bg-[hsl(var(--na-light-blue))] transition-colors"
             >
               <Video className="w-3 h-3" />Entrar
@@ -160,7 +156,6 @@ export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps)
           <div className="font-semibold text-sm text-foreground truncate mb-1">{sessao.grupo.nome}</div>
           <div className="flex items-center gap-1.5 flex-wrap">
             <TipoBadge sessao={sessao.sessao} />
-            {formatos && <span className="text-xs text-muted-foreground">{formatos}</span>}
           </div>
         </div>
         {sessao.zoomLink && (
@@ -168,9 +163,10 @@ export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps)
             href={sessao.zoomLink}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackZoomClick(sessao.grupo.nome, tipo, sessao.sessao.horario_inicio)}
-            className="px-3 py-1.5 rounded-lg text-xs font-bold bg-[hsl(var(--na-blue))] text-white hover:bg-[hsl(var(--na-light-blue))] transition-colors flex-shrink-0"
+            onClick={() => trackZoomClick(sessao.grupo.nome, tipo, sessao.sessao.horario_inicio, `meeting-card-${variant}`)}
+            className="px-3 py-1.5 rounded-lg text-xs font-bold bg-[hsl(var(--na-blue))] text-white hover:bg-[hsl(var(--na-light-blue))] transition-colors flex-shrink-0 inline-flex items-center gap-1"
           >
+            <Video className="w-3 h-3" />
             Entrar
           </a>
         )}
@@ -183,12 +179,28 @@ export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps)
   }
 
   // ── Em Andamento — card completo ──────────────────────────────────────────
+  const minutosDesdeInicio = Math.abs(sessao.minutosParaInicio)
+  const comecandoAgora = minutosDesdeInicio <= 30
+  const andamentoBadgeClass = comecandoAgora
+    ? "bg-[#ef4444] text-white"
+    : "bg-[hsl(var(--na-blue))] text-white"
+  const andamentoButtonClass = comecandoAgora
+    ? "bg-[#ef4444] hover:bg-[#dc2626] text-white"
+    : "bg-[hsl(var(--na-blue))] hover:bg-[hsl(var(--na-light-blue))] text-white"
+  const andamentoBorderClass = comecandoAgora
+    ? "border-l-4 border-l-[#EF4444] border border-[#EF4444] shadow-sm shadow-red-50"
+    : "border-l-4 border-l-[hsl(var(--na-blue))] border border-blue-100"
+  const andamentoStatusLabel = comecandoAgora ? "Começando agora" : "Em andamento"
+  const andamentoButtonLabel = comecandoAgora ? "Entrar Agora" : "Entrar"
+
   return (
-    <div className={`bg-card rounded-xl p-4 flex flex-col gap-2 transition-all hover:shadow-lg ${style.border} ${style.glow}`}>
+    <div className={`bg-card rounded-xl p-4 flex flex-col gap-2 transition-all hover:shadow-lg ${andamentoBorderClass}`}>
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-1.5">
-          {sessao.prioridade === 1 && <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse flex-shrink-0" />}
-          <span className={`inline-block px-2 py-0.5 rounded-full text-[11px] font-bold ${style.badge}`}>{sessao.statusLabel}</span>
+          <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-bold ${andamentoBadgeClass}`}>
+            {comecandoAgora ? <span className="h-2 w-2 rounded-full bg-white/85" /> : null}
+            {andamentoStatusLabel}
+          </span>
         </div>
         <TerminaEm minutos={sessao.minutosParaFim} />
       </div>
@@ -197,7 +209,6 @@ export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps)
 
       <div className="flex items-center gap-1.5 flex-wrap">
         <TipoBadge sessao={sessao.sessao} />
-        {formatos && <span className="text-[11px] text-muted-foreground/80">{formatos}</span>}
       </div>
 
       <div className="text-sm font-bold text-[hsl(var(--na-blue))] font-display">
@@ -212,8 +223,8 @@ export function MeetingCard({ sessao, variant = "andamento" }: MeetingCardProps)
 
       <div className="flex items-center gap-2 mt-auto pt-1">
         {renderBotaoEntrar(
-          `flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg text-xs font-bold transition-all hover:-translate-y-0.5 ${style.btn}`,
-          style.label
+          `flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg text-xs font-bold transition-all hover:-translate-y-0.5 ${andamentoButtonClass}`,
+          andamentoButtonLabel
         )}
         <ShareButton
           title={sessao.grupo.nome}

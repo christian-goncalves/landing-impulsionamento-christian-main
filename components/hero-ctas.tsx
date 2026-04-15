@@ -1,12 +1,13 @@
 "use client"
 
-import { trackCallClick, trackPresenciaisClick } from "@/lib/pixel"
+import { trackCallClick, trackCtaClick, trackPresenciaisClick } from "@/lib/pixel"
 
 export function HeroCTAs() {
   return (
     <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center md:justify-start">
       <a
         href="#reunioes"
+        onClick={() => trackCtaClick("hero", "reunioes_online")}
         className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-[hsl(var(--na-blue))] font-bold text-sm rounded-xl hover:bg-white/90 transition-colors shadow"
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

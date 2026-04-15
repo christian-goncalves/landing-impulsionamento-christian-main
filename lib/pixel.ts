@@ -9,8 +9,39 @@ declare global {
   }
 }
 
-// Mantém as funções exportadas como no-op para não quebrar imports existentes
-export function trackZoomClick(_grupoNome: string, _tipo: string, _horario: string) {}
-export function trackCallClick(_origem: string) {}
-export function trackPresenciaisClick(_origem: string) {}
-export function trackSiteNAClick(_origem: string) {}
+import { trackEvent } from "@/lib/analytics"
+
+export function trackZoomClick(grupoNome: string, tipoAcesso: string, horario: string, origin = "meeting-card") {
+  trackEvent("zoom_click", {
+    origin,
+    grupo_nome: grupoNome,
+    tipo_acesso: tipoAcesso,
+    horario,
+  })
+}
+
+export function trackCallClick(origin: string) {
+  trackEvent("call_click", { origin })
+}
+
+export function trackPresenciaisClick(origin: string) {
+  trackEvent("presenciais_click", { origin })
+}
+
+export function trackSiteNAClick(origin: string) {
+  trackEvent("site_na_click", { origin })
+}
+
+export function trackCtaClick(origin: string, cta: string) {
+  trackEvent("cta_click", {
+    origin,
+    cta,
+  })
+}
+
+export function trackShareClick(origin: string, canal: "whatsapp" | "copy_link") {
+  trackEvent("share_click", {
+    origin,
+    canal,
+  })
+}

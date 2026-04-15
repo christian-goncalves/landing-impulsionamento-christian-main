@@ -4,7 +4,12 @@ import { useState } from "react"
 import Image from "next/image"
 import { Menu, X, ChevronDown, Phone, ExternalLink, MapPin, Video } from "lucide-react"
 import { BRTClock } from "./brt-clock"
-import { trackCallClick, trackPresenciaisClick, trackSiteNAClick } from "@/lib/pixel"
+import {
+  trackCallClick,
+  trackCtaClick,
+  trackPresenciaisClick,
+  trackSiteNAClick,
+} from "@/lib/pixel"
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -54,9 +59,9 @@ export function SiteHeader() {
             </button>
             {reunioesOnlineOpen && (
               <div className="absolute top-full left-0 mt-1 bg-card border border-border rounded-lg shadow-lg min-w-[180px] overflow-hidden z-50">
-                <a href="#andamento" onClick={handleNavClick} className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-[hsl(var(--na-blue))] transition-colors">Em Andamento</a>
-                <a href="#iniciando" onClick={handleNavClick} className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-[hsl(var(--na-blue))] transition-colors">Iniciando em Breve</a>
-                <a href="#proximas" onClick={handleNavClick} className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-[hsl(var(--na-blue))] transition-colors">Próximas</a>
+                <a href="#andamento" onClick={() => { trackCtaClick("header", "em_andamento"); handleNavClick() }} className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-[hsl(var(--na-blue))] transition-colors">Em Andamento</a>
+                <a href="#iniciando" onClick={() => { trackCtaClick("header", "iniciando_em_breve"); handleNavClick() }} className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-[hsl(var(--na-blue))] transition-colors">Iniciando em Breve</a>
+                <a href="#proximas" onClick={() => { trackCtaClick("header", "proximas_reunioes"); handleNavClick() }} className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-[hsl(var(--na-blue))] transition-colors">Próximas</a>
               </div>
             )}
           </div>
@@ -114,9 +119,9 @@ export function SiteHeader() {
               </button>
               {reunioesOnlineOpen && (
                 <div className="ml-4 flex flex-col gap-0.5">
-                  <a href="#andamento" onClick={handleNavClick} className="px-3 py-2 text-sm text-muted-foreground hover:text-[hsl(var(--na-blue))] hover:bg-secondary rounded-md transition-colors">Em Andamento</a>
-                  <a href="#iniciando" onClick={handleNavClick} className="px-3 py-2 text-sm text-muted-foreground hover:text-[hsl(var(--na-blue))] hover:bg-secondary rounded-md transition-colors">Iniciando em Breve</a>
-                  <a href="#proximas" onClick={handleNavClick} className="px-3 py-2 text-sm text-muted-foreground hover:text-[hsl(var(--na-blue))] hover:bg-secondary rounded-md transition-colors">Próximas</a>
+                  <a href="#andamento" onClick={() => { trackCtaClick("header-mobile", "em_andamento"); handleNavClick() }} className="px-3 py-2 text-sm text-muted-foreground hover:text-[hsl(var(--na-blue))] hover:bg-secondary rounded-md transition-colors">Em Andamento</a>
+                  <a href="#iniciando" onClick={() => { trackCtaClick("header-mobile", "iniciando_em_breve"); handleNavClick() }} className="px-3 py-2 text-sm text-muted-foreground hover:text-[hsl(var(--na-blue))] hover:bg-secondary rounded-md transition-colors">Iniciando em Breve</a>
+                  <a href="#proximas" onClick={() => { trackCtaClick("header-mobile", "proximas_reunioes"); handleNavClick() }} className="px-3 py-2 text-sm text-muted-foreground hover:text-[hsl(var(--na-blue))] hover:bg-secondary rounded-md transition-colors">Próximas</a>
                 </div>
               )}
             </div>

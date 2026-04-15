@@ -1,5 +1,8 @@
+"use client"
+
 import { ExternalLink, Globe } from "lucide-react"
 import Image from "next/image"
+import { trackSiteNAClick } from "@/lib/pixel"
 
 export function LojaVirtual() {
   return (
@@ -28,6 +31,7 @@ export function LojaVirtual() {
               href="https://www.na.org.br"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackSiteNAClick("loja-virtual")}
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[hsl(var(--na-blue))] font-bold text-sm rounded-xl hover:bg-white/90 transition-colors"
             >
               <Globe className="w-4 h-4" />

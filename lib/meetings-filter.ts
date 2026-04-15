@@ -127,7 +127,7 @@ export function getMeetingsFromGroupsAtTime(grupos: Grupo[], now: Date): Meeting
     }
   }
 
-  emAndamento.sort((a, b) => a.minutosParaInicio - b.minutosParaInicio)
+  emAndamento.sort((a, b) => b.minutosParaInicio - a.minutosParaInicio)
   iniciandoEmBreve.sort((a, b) => a.minutosParaInicio - b.minutosParaInicio)
   proximas.sort((a, b) => a.minutosParaInicio - b.minutosParaInicio)
 
