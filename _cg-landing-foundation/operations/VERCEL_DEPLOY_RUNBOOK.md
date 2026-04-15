@@ -24,8 +24,10 @@ Recomendacao de producao:
 
 ## Scheduler
 - Arquivo: `vercel.json`
-- Cron: `*/10 * * * *`
+- Cron atual (Hobby): `0 3 * * *` (1x ao dia)
 - Endpoint: `POST /api/sync/manual`
+
+Se migrar para plano Pro, trocar para `*/10 * * * *`.
 
 ## Validacao pos-deploy
 1. Abrir deployment de preview e validar `GET /api/reunioes-virtuais`.

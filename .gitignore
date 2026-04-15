@@ -13,3 +13,4 @@ data/runtime/
 tmp_dev_out.log
 tmp_dev_err.log
 
+.vercel
