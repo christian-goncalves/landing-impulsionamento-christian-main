@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { buildPayloadV1 } from "@/lib/payload-v1"
+import meetingsData from "@/data/na_meetings.json"
 import {
   readCurrentGroups,
   readCurrentPayload,
@@ -14,7 +15,7 @@ import {
   writeSyncState,
 } from "@/lib/runtime-store"
 import { scrapeNaVirtualMeetings } from "@/lib/na-virtual-scraper"
-import { getMeetingsFromGroups } from "@/lib/meetings"
+import { getMeetingsFromGroups, type Grupo } from "@/lib/meetings"
 
 export async function GET() {
   const currentPayload = await readCurrentPayload()
@@ -46,11 +47,7 @@ export async function GET() {
       )
     }
 
-    return NextResponse.json({
-      ...base,
-      serverTime: new Date().toISOString(),
-      sourceStatus: resolvedStatus,
-    })
+    return NextResponse.json(buildLegacyFallbackPayload(base.lastSyncAt, resolvedStatus))
   }
 
   if (currentGroups && currentGroups.length > 0) {
@@ -103,8 +100,14 @@ export async function GET() {
         lastFailureAt: null,
       })
       return NextResponse.json(payload)
-    } catch {
-      // Se não conseguir migrar automaticamente, cai para payload legado.
+    } catch (error) {
+      console.error("Falha ao migrar runtime para grupos atuais.", error)
+      return NextResponse.json(
+        buildLegacyFallbackPayload(
+          currentPayload.lastSyncAt ?? snapshotPayload?.lastSyncAt ?? null,
+          "fallback"
+        )
+      )
     }
   }
 
@@ -132,11 +135,10 @@ export async function GET() {
     })
 
     return NextResponse.json(payload)
-  } catch {
-    // Mantém resposta contratual mesmo se bootstrap falhar.
+  } catch (error) {
+    console.error("Falha no bootstrap de scraping em ambiente limpo.", error)
+    return NextResponse.json(buildLegacyFallbackPayload(null, "fallback"))
   }
-
-  return NextResponse.json(buildPayloadV1("ok"))
 }
 
 function shouldAttemptScheduledSync(
@@ -153,4 +155,16 @@ function shouldAttemptScheduledSync(
   }
 
   return elapsedMs / 60000 >= syncIntervalMinutes
+}
+
+function buildLegacyFallbackPayload(
+  lastSyncAt: string | null,
+  sourceStatus: "fallback" | "stale" = "fallback"
+) {
+  const groups = (meetingsData as { grupos?: Grupo[] }).grupos ?? []
+  if (groups.length === 0) {
+    return buildPayloadV1(sourceStatus, undefined, lastSyncAt)
+  }
+
+  return buildPayloadV1(sourceStatus, getMeetingsFromGroups(groups), lastSyncAt)
 }
