@@ -10,6 +10,7 @@ Determinar se o comportamento "sem dados" observado em ambiente Vercel era repet
 ## Referencias oficiais
 - Incidente base: `_cg-landing-foundation/incidents/2026-04-12-domingo-vazio/RCA.md`
 - Evidencias base: `_cg-landing-foundation/incidents/2026-04-12-domingo-vazio/EVIDENCE.md`
+- Execucao de contingencia e estabilizacao (2026-04-15): `_cg-landing-foundation/incidents/2026-04-15-aws-vercel-divergencia/EXECUCAO_CONTINGENCIA_2026-04-15.md`
 
 ## Resultado resumido
 Nao e o mesmo bug de domingo.

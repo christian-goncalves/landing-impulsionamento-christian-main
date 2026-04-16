@@ -9,7 +9,26 @@ interface SyncState {
   lastFailureAt: string | null
 }
 
-const runtimeDir = path.join(process.cwd(), "data", "runtime")
+const inMemoryStore = new Map<string, unknown>()
+
+function resolveRuntimeDir(): string {
+  const explicitRuntimeDir = process.env.MEETINGS_RUNTIME_DIR?.trim()
+  if (explicitRuntimeDir) {
+    if (process.env.VERCEL === "1" && explicitRuntimeDir.startsWith("/var/task")) {
+      return path.join("/tmp", "na-runtime")
+    }
+    return explicitRuntimeDir
+  }
+
+  // Vercel Serverless filesystem is read-only under /var/task; use /tmp for writable runtime files.
+  if (process.env.VERCEL === "1") {
+    return path.join("/tmp", "na-runtime")
+  }
+
+  return path.join(process.cwd(), "data", "runtime")
+}
+
+const runtimeDir = resolveRuntimeDir()
 const currentPayloadFile = path.join(runtimeDir, "current_payload_v1.json")
 const lastSnapshotFile = path.join(runtimeDir, "last_valid_snapshot_v1.json")
 const currentGroupsFile = path.join(runtimeDir, "current_groups.json")
@@ -30,15 +49,33 @@ async function ensureRuntimeDir(): Promise<void> {
 async function readJsonFile<T>(filePath: string): Promise<T | null> {
   try {
     const raw = await fs.readFile(filePath, "utf8")
-    return JSON.parse(raw) as T
+    const parsed = JSON.parse(raw) as T
+    inMemoryStore.set(filePath, parsed)
+    return parsed
   } catch {
-    return null
+    const fallback = inMemoryStore.get(filePath)
+    return (fallback as T | undefined) ?? null
   }
 }
 
 async function writeJsonFile(filePath: string, value: unknown): Promise<void> {
-  await ensureRuntimeDir()
-  await fs.writeFile(filePath, JSON.stringify(value, null, 2), "utf8")
+  inMemoryStore.set(filePath, value)
+
+  try {
+    await ensureRuntimeDir()
+    await fs.writeFile(filePath, JSON.stringify(value, null, 2), "utf8")
+  } catch (error) {
+    const code =
+      error && typeof error === "object" && "code" in error
+        ? String((error as { code?: string }).code ?? "unknown")
+        : "unknown"
+
+    console.error("[runtime-store] write failed, using in-memory fallback", {
+      filePath,
+      runtimeDir,
+      code,
+    })
+  }
 }
 
 export async function readCurrentPayload(): Promise<ApiPayloadV1 | null> {
@@ -86,9 +123,24 @@ export async function writeQualityReport(
   report: unknown,
   fileName = "latest_quality_report.json"
 ): Promise<void> {
-  await fs.mkdir(qualityDir, { recursive: true })
   const target = path.join(qualityDir, fileName)
-  await fs.writeFile(target, JSON.stringify(report, null, 2), "utf8")
+  inMemoryStore.set(target, report)
+
+  try {
+    await fs.mkdir(qualityDir, { recursive: true })
+    await fs.writeFile(target, JSON.stringify(report, null, 2), "utf8")
+  } catch (error) {
+    const code =
+      error && typeof error === "object" && "code" in error
+        ? String((error as { code?: string }).code ?? "unknown")
+        : "unknown"
+
+    console.error("[runtime-store] quality report write failed", {
+      target,
+      runtimeDir,
+      code,
+    })
+  }
 }
 
 export function resolveSourceStatus(

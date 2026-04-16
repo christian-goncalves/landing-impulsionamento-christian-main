@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "reuniaovirtual.online"
+        }
+      ],
+      "destination": "https://na.reuniaovirtual.online/$1",
+      "permanent": true
+    }
+  ],
   "crons": [
     {
       "path": "/api/sync/manual",

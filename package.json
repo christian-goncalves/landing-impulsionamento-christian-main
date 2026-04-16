@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint .",
     "meetings:md": "node scripts/generate-na-meetings-md.mjs",
-    "meetings:md:watch": "node scripts/generate-na-meetings-md.mjs --watch"
+    "meetings:md:watch": "node scripts/generate-na-meetings-md.mjs --watch",
+    "cutover:validate": "node scripts/validate-canonical-cutover.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
