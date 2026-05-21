@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from 'next/font/google'
 import Script from 'next/script'
 import { Analytics } from "@vercel/analytics/next"
 import { AnalyticsEvents } from "@/components/analytics-events"
+import { WhatsAppWidget } from "@/components/whatsapp-widget"
 
 import './globals.css'
 
@@ -92,6 +93,7 @@ fbq('track','PageView');`,
         </noscript>
 
         {children}
+        <WhatsAppWidget />
         <AnalyticsEvents />
         <Analytics />
 
